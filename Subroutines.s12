@@ -6,3 +6,4 @@
 ;	LDAB #bitnummer (ex #%00001000)
 ;	JSR  Outzero
 
+A
