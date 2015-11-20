@@ -17,6 +17,35 @@ MotorStop:
 		LDAB	#$2
 		JSR	Outzero
 		RTS
+DrillDown:	
+		LDAB	#$3
+		JSR	Outone
+		RTS
+		
+DrillUp:	
+		LDAB	#$3
+		JSR	Outzero
+		JSR	DELAY
+		RTS
+
+Alarm:
+		BITB	#$FF
+		BEQ	Alarm_end
+Alarm_loop:	PSHB			; Börjar larm loopen sparar B
+		LDAB	#$4
+		JSR	Outone		; Sätter igång larmet
+		JSR	DELAY
+		JSR	DELAY		; Chillar
+		JSR	Outzero		; Stänger av
+		PULB			; Laddar tillbaks B (antal larm sign)
+		DECB			; N = N-1
+		BITB  	#$FF		; Om 0
+		BEQ	Alarm_end	; Hoppa
+		JSR	DELAY
+		JMP	Alarm_loop		
+Alarm_end:	RTS
+
+
 ; Läser kopian av borrmaskinens styrord på DCShadow
 ; Nollställer en av bitarna (ges av B) skriver det nya till
 ; DrillControl samt till DCShadow

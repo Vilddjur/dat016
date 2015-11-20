@@ -36,12 +36,6 @@ Command:
 	JSR	,X	;do subroutine
 CommandExit:
 	RTS
-SUB2:	
-	MOVB 	#2,OutPort
-	RTS
-SUB3:	
-	MOVB 	#3,OutPort
-	RTS
 SUB4:	
 	MOVB 	#4,OutPort
 	RTS
@@ -63,4 +57,4 @@ SUB7:
 	USE	Delay.s12
 	USE	Subroutines.s12
 DCShadow: RMB	1
-JUMPTAB		FDB MotorStart,MotorStop,SUB2,SUB3,SUB4,SUB5,SUB6,SUB7
+JUMPTAB		FDB MotorStart,MotorStop,DrillDown,DrillUp,SUB4,SUB5,SUB6,SUB7
