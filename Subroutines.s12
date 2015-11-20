@@ -1,5 +1,22 @@
 ;
 ; Subroutines.s12
+
+MotorStart:
+		LDAA	DCShadow
+		BITA	#%00000100
+		BNE	MotorStart_end
+		LDAB	#$2
+		JSR	Outone
+		JSR	DELAY
+		JSR	DELAY
+		JSR	DELAY
+		JSR	DELAY
+MotorStart_end: RTS
+
+MotorStop:
+		LDAB	#$2
+		JSR	Outzero
+		RTS
 ; Läser kopian av borrmaskinens styrord på DCShadow
 ; Nollställer en av bitarna (ges av B) skriver det nya till
 ; DrillControl samt till DCShadow
