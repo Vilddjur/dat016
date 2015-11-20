@@ -1,0 +1,17 @@
+	ORG	$1000
+#define	SIMULATOR
+#define	RUNFAST
+	USE	Labdefs.s12
+start:
+	JSR	Vrid1Steg
+	BRA	start
+	
+	USE	Delay.s12
+	
+Vrid1Steg:	LDAA	#%00000011
+		STAA	DrillControl
+		JSR	DELAY
+		LDAA	#0
+		STAA	DrillControl
+		RTS
+		
