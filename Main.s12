@@ -1,0 +1,69 @@
+;Main.s12
+;operatorcontrolled drill :)
+
+
+;definitions
+
+	
+	ORG 	$1000
+	
+OutPort		EQU	$700
+	
+main:
+	;initialize drill
+	
+	
+	
+;mainprogram,wait for chosen operation
+main_loop:
+	JSR 	GetKbdML15
+	NOP
+	JSR 	Command
+	NOP
+	BRA	main_loop
+	
+	
+	
+; here your shitty command routine with tabels
+Command:
+	CMPB	#7
+	BHI	CommandExit
+	LDX	#JUMPTAB
+	;offset 2 bytes
+	ASLB
+	LDX	B,X ; get address of chosen subroutine
+	JSR	,X	;do subroutine
+CommandExit:
+	RTS
+SUB0:
+	MOVB 	#0,OutPort
+	RTS
+SUB1:	
+	MOVB 	#1,OutPort
+	RTS
+SUB2:	
+	MOVB 	#2,OutPort
+	RTS
+SUB3:	
+	MOVB 	#3,OutPort
+	RTS
+SUB4:	
+	MOVB 	#4,OutPort
+	RTS
+SUB5:	
+	MOVB 	#5,OutPort
+	RTS
+SUB6:	
+	MOVB 	#6,OutPort
+	RTS
+SUB7:	
+	MOVB 	#7,OutPort
+	RTS
+
+	;USE ML15drvr.s12
+	
+;global variables shit
+	USE 	Labdefs.s12
+	USE	KeyboardML15.s12
+DCShadow: RMB	1
+JUMPTAB		FDB SUB0,SUB1,SUB2,SUB3,SUB4,SUB5,SUB6,SUB7
