@@ -1,5 +1,7 @@
-	USE 	Labdefs.s12
 	ORG	$1000
+#define	SIMULATOR
+	USE 	Labdefs.s12
+
 
 start:	LDAA	#0
 	STAA	DrillControl
