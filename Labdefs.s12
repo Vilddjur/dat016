@@ -2,7 +2,7 @@ DipSwitch 	EQU 	$0600
 HexDisplay	EQU	$0700
 
 DrillControl	EQU	$0400
-DCShadow	RMB	1	; DrillControl shadow
+;DCShadow	RMB	1	; DrillControl shadow
 #ifdef	SIMULATOR
 DrillStatus	EQU	$0401
 #else
