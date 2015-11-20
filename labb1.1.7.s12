@@ -1,0 +1,14 @@
+	ORG $1000
+main:	JSR GetPut
+	BRA main
+	
+GetPut:
+	JSR 	GetKbdML15
+	NOP
+	JSR	DisplayML15
+	RTS
+	
+	;
+	use DisplayML13.s12
+	use KeyboardML15.s12
+		

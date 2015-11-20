@@ -1,0 +1,20 @@
+DipSwitch 	EQU 	$0600
+HexDisplay	EQU	$0700
+
+DrillControl	EQU	$0400
+
+#ifdef	SIMULATOR
+DrillStatus	EQU	$0401
+#else
+DrillStatus	EQU	$0600
+#endif
+
+#ifdef	SIMULATOR
+#ifdef	RUNFAST
+DelayConst:	EQU	6 ; För snabb y=1, 35 för y=100;
+#else
+DelayConst:	EQU	1 ; för y=1
+#endif
+#else
+DelayConst:	EQU	3250
+#endif

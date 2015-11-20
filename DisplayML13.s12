@@ -1,0 +1,39 @@
+
+DispMR		EQU	$09C2 ;Display Mode Register
+DispSDMR	EQU	$09C3	;Display Styr data Register
+		;ORG 	$1000
+		LDX	#tabell
+startD:
+	JSR	DisplayML15
+	BRA	startD
+	
+	
+
+DisplayML15:
+	LDAA	#$1
+	STAA	DispMR
+	LDAA	#$D0
+	STAA	DispSDMR
+	LDAA	#$0
+	STAA	DispMR
+
+DisplayML15_loop:
+	CMPA	#$6
+	BEQ	DisplayML15_end
+		;Not equal to 6, so do shit here
+	STAB	DispSDMR
+	INCA	
+	JMP	DisplayML15_loop
+	
+DisplayML15_end:
+	LDAA 	#$0
+	STAA	DispSDMR
+	STAA	DispSDMR
+	RTS
+
+	
+	
+	
+	
+;
+tabell:		FCB	1,2,3,4,5,6

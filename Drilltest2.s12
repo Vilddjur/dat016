@@ -1,0 +1,44 @@
+	USE 	Labdefs.s12
+	ORG	$1000
+
+start:	LDAA	#0
+	STAA	DrillControl
+	JSR	TillRefsPos
+	JSR	Borra
+	JSR	Vrid1Steg
+	JSR	Borra
+	JSR	Vrid1Steg
+	JSR	Borra
+	JSR	Vrid1Steg
+	JSR	Vrid1Steg
+	JSR	Vrid1Steg
+	JSR	Borra
+	JSR 	GeLarm
+stopp:	BRA	stopp
+
+Vrid1Steg:	LDAA	DipSwitch
+		ANDA	#%00000010
+		ORAA	#%00000001
+		STAA	DrillControl
+		LDAA	#0
+		STAA	DrillControl
+		RTS
+TillRefsPos:	LDAA	DrillStatus
+		ANDA	#%00000001
+		CMPA	#%00000001
+		BEQ	TillRefsPos_ret
+		JSR	Vrid1Steg
+		BRA	TillRefsPos
+TillRefsPos_ret:	RTS
+Borra:		LDAA	#%00001100
+		STAA	DrillControl
+Borra_loop:	LDAA	DrillStatus
+		ANDA	#%00000100
+		CMPA	#%00000100
+		BNE	Borra_loop
+		LDAA	#0
+		STAA	DrillControl
+		RTS
+GeLarm:		LDAA	#%00010000
+		STAA	DrillControl
+		RTS

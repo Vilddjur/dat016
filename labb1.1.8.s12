@@ -1,0 +1,5 @@
+	ORG 	$1000
+Loop	NOP
+	STAA	$400
+	LDAB	$600
+	BRA	Loop

@@ -1,0 +1,8 @@
+; Läser kopian av borrmaskinens styrord på DCShadow
+; Nollställer en av bitarna (ges av B) skriver det nya till
+; DrillControl samt till DCShadow
+; Om B > 7 ska inget ske.
+; Ex. anrop:
+;	LDAB #bitnummer (ex #%00001000)
+;	JSR  Outzero
+

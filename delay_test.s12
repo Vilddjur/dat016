@@ -1,0 +1,26 @@
+;#define		SIMULATOR
+;#define		RUNFAST
+		USE	Labdefs.s12
+		ORG	$1000
+		CLRA
+Start:		JSR	DELAY
+		CMPA	#$4
+		BEQ	TurnOff
+		LDAA	#$4
+		BRA	SkickaTillBorr
+TurnOff:	
+		LDAA	#$0
+SkickaTillBorr:
+		STAA	$400
+		BRA	Start
+		
+DELAY:		LDX	#DelayConst
+NEXT:		LEAX	-1,X
+		LDY	#100
+NEXT2:		LEAY	-1,Y
+		CPY	#0
+		BNE	NEXT2
+		CPX	#0
+		BNE	NEXT
+		RTS
+		

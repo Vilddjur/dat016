@@ -1,0 +1,7 @@
+	USE 	Labdefs.s12
+	ORG	$1000
+Dtest1:
+	LDAA	DipSwitch
+	STAA	DrillControl
+	BRA	Dtest1
+	

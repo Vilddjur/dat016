@@ -1,0 +1,38 @@
+
+Keyboard 	EQU	$9C0	
+		;ORG	$1000
+	
+startK:
+	JSR	CheckKbd_First
+	CMPB	#$FF
+	BEQ	startK
+	NOP
+	BRA	startK
+
+	
+CheckKbd_First:
+	LDAB	Keyboard
+	BITB	#%10000000
+	BNE	CheckKbd_First_return
+	PSHB
+CheckKbd_First_loop:
+	LDAB	Keyboard
+	BITB	#%10000000
+	BEQ	CheckKbd_First_loop
+	PULB
+	RTS
+	
+CheckKbd_First_return:
+	LDAB 	#$FF
+	RTS
+	
+GetKbdML15:
+	JSR	CheckKbd_First
+	CMPB	#$FF
+	BEQ	GetKbdML15
+	RTS
+	
+	
+	
+	
+;=================================================================================
