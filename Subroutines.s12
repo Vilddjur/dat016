@@ -61,6 +61,34 @@ Step_no_step:	LDAB 	#$2
 		JSR	Alarm
 		LDAB	#$0
 		RTS
+		
+		; Funkar ej för hål som redan finns(bugg?)
+DrillDownTest:
+		LDAA	#$14		; Retry 20(decimal) times
+DrillDownTest_loop:
+		LDAB	DrillStatus
+		BITB	#$4
+		BNE	DrillDownTest_return_down	; Borren nere
+		JSR	DELAY
+		DECA
+		BITA	#$FF		; Check if 0
+		BNE	DrillDownTest_loop
+		LDAB	#$2
+		JSR	Alarm
+		LDAB	#$0
+		RTS
+DrillDownTest_return_down:
+		LDAB	#$1
+		RTS
+		
+DrillHole:
+		JSR	DrillDown
+		JSR	DrillDownTest
+		PSHB
+		JSR	DrillUp
+		PULB
+		RTS
+		
 ; Läser kopian av borrmaskinens styrord på DCShadow
 ; Nollställer en av bitarna (ges av B) skriver det nya till
 ; DrillControl samt till DCShadow
