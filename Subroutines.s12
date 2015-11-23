@@ -55,8 +55,9 @@ Step:		LDAA	DrillStatus
 		JSR	DELAY		; Delay
 		LDAB	#$0
 		JSR	Outone		; 1
+		JSR	DELAY
 		LDAB	#$1
-		RTS			; Assume B still #$1 from Outone
+		RTS	
 Step_no_step:	LDAB 	#$2
 		JSR	Alarm
 		LDAB	#$0
@@ -87,6 +88,18 @@ DrillHole:
 		PSHB
 		JSR	DrillUp
 		PULB
+		RTS
+		
+RefPos:		
+RefPos_loop:	LDAA	DrillStatus
+		BITA	#$1
+		BNE	RefPos_done
+		JSR	Step
+		BITB	#$FF
+		BNE	RefPos_loop	; Not zero -> loop
+		RTS			; B=0 error
+RefPos_done:	
+		LDAB	#$1
 		RTS
 		
 ; Läser kopian av borrmaskinens styrord på DCShadow
