@@ -73,7 +73,7 @@ DrillDownTest_loop:
 		JSR	DELAY
 		DECA
 		BITA	#$FF		; Check if 0
-		BNE	DrillDownTest_loop
+		BNE	DrillDownTest_loop	; If not zero loop
 		LDAB	#$2
 		JSR	Alarm
 		LDAB	#$0
@@ -102,6 +102,41 @@ RefPos_done:
 		LDAB	#$1
 		RTS
 		
+Nstep:		
+Nstep_loop:	BITB	#$FF		
+		BEQ	Nstep_ret	; If zero dont continue
+		DECB
+		PSHB			; Push N
+		JSR	Step
+		BITB	#$FF		
+		BNE	Nstep_pull	; If not zero loop
+		RTS
+Nstep_pull:	PULB			; Pull b and loop
+		BRA	Nstep_loop
+Nstep_ret:	LDAB	#$1
+		RTS
+		
+DoAuto:		
+		JSR	RefPos
+		BITB	#$FF		
+		BEQ	DoAuto_ret	; If Zero ret
+		JSR	MotorStart
+		LDAA	#$0
+DoAuto_loop:	LDAB	A,X
+		INCA
+		PSHB
+		CMPB	#$FF
+		BEQ	DoAuto_ret	; If FF ret
+		PULB
+		JSR	Nstep		; Step B times
+		BITB	#$FF
+		BEQ	DoAuto_ret	; IF zero return
+		JSR	DrillHole
+		BITB	#$FF
+		BEQ	DoAuto_ret	; IF zero return
+		BRA	DoAuto_loop	; else loop
+DoAuto_ret:	JSR	MotorStop
+		RTS
 ; Läser kopian av borrmaskinens styrord på DCShadow
 ; Nollställer en av bitarna (ges av B) skriver det nya till
 ; DrillControl samt till DCShadow

@@ -36,10 +36,9 @@ Command:
 	JSR	,X	;do subroutine
 CommandExit:
 	RTS
-SUB7:	
-	MOVB 	#7,OutPort
-	RTS
-
+Auto:
+	LDX 	#Pattern
+	JSR	DoAuto
 	;USE ML15drvr.s12
 	
 ;global variables shit
@@ -47,5 +46,6 @@ SUB7:
 	USE	KeyboardML15.s12
 	USE	Delay.s12
 	USE	Subroutines.s12
-DCShadow: RMB	1
-JUMPTAB		FDB MotorStart,MotorStop,DrillDown,DrillUp,Step,DrillHole,RefPos,SUB7
+DCShadow: 	RMB	1
+Pattern:	FCB	0,1,1,1,1,1,1,1,2,1,5,2,2,2,2,4,4,3,8,2,$FF
+JUMPTAB		FDB MotorStart,MotorStop,DrillDown,DrillUp,Step,DrillHole,RefPos,Auto
