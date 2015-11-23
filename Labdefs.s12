@@ -11,7 +11,7 @@ DrillStatus	EQU	$0600
 
 #ifdef	SIMULATOR
 #ifdef	RUNFAST
-DelayConst:	EQU	35 ; För snabb y=1, 35 för y=100;
+DelayConst:	EQU	20 ; För snabb y=1, 35 för y=100;
 #else
 DelayConst:	EQU	1 ; för y=1
 #endif
