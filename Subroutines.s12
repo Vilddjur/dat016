@@ -45,7 +45,22 @@ Alarm_loop:	PSHB			; Börjar larm loopen sparar B
 		JMP	Alarm_loop		
 Alarm_end:	RTS
 
-
+Step:		LDAA	DrillStatus
+		BITA	#$2
+		BEQ	Step_no_step
+		LDAB	#$1		; Medurs
+		JSR	Outone		
+		LDAB	#$0
+		JSR	Outzero		; 0
+		JSR	DELAY		; Delay
+		LDAB	#$0
+		JSR	Outone		; 1
+		LDAB	#$1
+		RTS			; Assume B still #$1 from Outone
+Step_no_step:	LDAB 	#$2
+		JSR	Alarm
+		LDAB	#$0
+		RTS
 ; Läser kopian av borrmaskinens styrord på DCShadow
 ; Nollställer en av bitarna (ges av B) skriver det nya till
 ; DrillControl samt till DCShadow
