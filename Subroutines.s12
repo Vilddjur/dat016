@@ -2,30 +2,40 @@
 ; Subroutines.s12
 
 MotorStart:
+		PSHA
 		LDAA	DCShadow
 		BITA	#%00000100
 		BNE	MotorStart_end
+		PSHB
 		LDAB	#$2
 		JSR	Outone
 		JSR	DELAY
 		JSR	DELAY
 		JSR	DELAY
 		JSR	DELAY
+		PULA
+		PULB
 MotorStart_end: RTS
 
 MotorStop:
+		PSHB
 		LDAB	#$2
 		JSR	Outzero
+		PULB
 		RTS
 DrillDown:	
+		PSHB
 		LDAB	#$3
 		JSR	Outone
+		PULB
 		RTS
 		
 DrillUp:	
+		PSHB
 		LDAB	#$3
 		JSR	Outzero
 		JSR	DELAY
+		PULB
 		RTS
 
 Alarm:
@@ -45,7 +55,8 @@ Alarm_loop:	PSHB			; Börjar larm loopen sparar B
 		JMP	Alarm_loop		
 Alarm_end:	RTS
 
-Step:		LDAA	DrillStatus
+Step:		PSHA
+		LDAA	DrillStatus
 		BITA	#$2
 		BEQ	Step_no_step
 		LDAB	#$1		; Medurs
@@ -57,14 +68,17 @@ Step:		LDAA	DrillStatus
 		JSR	Outone		; 1
 		JSR	DELAY
 		LDAB	#$1
+		PULA
 		RTS	
 Step_no_step:	LDAB 	#$2
 		JSR	Alarm
 		LDAB	#$0
+		PULA
 		RTS
 		
 		; Funkar ej för hål som redan finns(bugg?)
 DrillDownTest:
+		PSHA
 		LDAA	#$14		; Retry 20(decimal) times
 DrillDownTest_loop:
 		LDAB	DrillStatus
@@ -77,9 +91,11 @@ DrillDownTest_loop:
 		LDAB	#$2
 		JSR	Alarm
 		LDAB	#$0
+		PULA
 		RTS
 DrillDownTest_return_down:
 		LDAB	#$1
+		PULA
 		RTS
 		
 DrillHole:
@@ -144,7 +160,9 @@ DoAuto_ret:	JSR	MotorStop
 ; Ex. anrop:
 ;	LDAB #bitnummer (ex #%00001000)
 ;	JSR  Outzero
-Outzero:	BITB	#$F8 ; Kollar om B > 7
+Outzero:	PSHX
+		PSHA
+		BITB	#$F8 ; Kollar om B > 7
 		BNE	Outzero_end ; Z=0, B > 7, gör inget
 		LDX	#tabell
 		LDAA	B,X
@@ -152,16 +170,22 @@ Outzero:	BITB	#$F8 ; Kollar om B > 7
 		ANDA	DCShadow
 		STAA	DrillControl
 		STAA	DCShadow
+		PULA
+		PULX
 Outzero_end:	RTS
 
 ; Samma som innan fast ge ett ist.
-Outone:		BITB	#$F8 ; Kollar om B > 7
+Outone:		PSHX
+		PSHA
+		BITB	#$F8 ; Kollar om B > 7
 		BNE	Outone_end ; Z=0, B > 7, gör inget
 		LDX	#tabell
 		LDAA	B,X
 		ORAA	DCShadow
 		STAA	DrillControl
 		STAA	DCShadow
+		PULA
+		PULX
 Outone_end:	RTS
 
 tabell:		FCB	%00000001,%00000010,%00000100,%00001000,%00010000,%00100000,%01000000,%10000000
