@@ -4,10 +4,10 @@
 
 ;definitions
 
-#define 	RUNFAST
-#define		SIMULATOR
+;#define 	RUNFAST
+;#define		SIMULATOR
 		ORG 	$1000
-	
+		NOP
 OutPort		EQU	$700
 	
 main:
@@ -25,7 +25,7 @@ main_loop:
 	
 	
 	
-; here your shitty command routine with tabels
+; here your command routine with tabels
 Command:
 	CMPB	#7
 	BHI	CommandExit
@@ -39,6 +39,7 @@ CommandExit:
 Auto:
 	LDX 	#Pattern
 	JSR	DoAuto
+	RTS
 	;USE ML15drvr.s12
 	
 ;global variables shit
@@ -48,4 +49,4 @@ Auto:
 	USE	Subroutines.s12
 DCShadow: 	RMB	1
 Pattern:	FCB	0,1,1,1,1,1,1,1,2,1,5,2,2,2,2,4,4,3,8,2,$FF
-JUMPTAB		FDB MotorStart,MotorStop,DrillDown,DrillUp,Step,DrillHole,RefPos,Auto
+JUMPTAB:	FDB MotorStart,MotorStop,DrillDown,DrillUp,Step,DrillHole,RefPos,Auto

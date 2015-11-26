@@ -140,18 +140,18 @@ DoAuto:
 		LDAA	#$0
 DoAuto_loop:	LDAB	A,X
 		INCA
-		PSHB
 		CMPB	#$FF
 		BEQ	DoAuto_ret	; If FF ret
-		PULB
 		JSR	Nstep		; Step B times
 		BITB	#$FF
 		BEQ	DoAuto_ret	; IF zero return
 		JSR	DrillHole
-		BITB	#$FF
+		TSTB			; Check B
 		BEQ	DoAuto_ret	; IF zero return
 		BRA	DoAuto_loop	; else loop
-DoAuto_ret:	JSR	MotorStop
+DoAuto_ret:	
+		NOP
+		JSR	MotorStop
 		RTS
 ; Läser kopian av borrmaskinens styrord på DCShadow
 ; Nollställer en av bitarna (ges av B) skriver det nya till
@@ -171,7 +171,7 @@ Outzero:	PSHX
 		STAA	DrillControl
 		STAA	DCShadow
 		PULA
-		PULX
+		PULX 
 Outzero_end:	RTS
 
 ; Samma som innan fast ge ett ist.
