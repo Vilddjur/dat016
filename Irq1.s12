@@ -1,0 +1,31 @@
+Port1:	EQU	$0400
+Port2:	EQU	$0401
+
+	ORG	$1000
+	
+main:
+;Nollställ variabler
+	CLR	Var1
+	CLR	Var2
+;Initiera avbrottsvektor IRQ
+	LDX	#IrqR
+	STX	$3FF2
+;Nollställ I-bit tillåt abrott
+	CLI
+	
+;Var1 o Var2 skrivs till portar
+;Var1 inkrementeras
+main_loop:
+	INC	Var1
+	MOVB	Var1,Port1
+	MOVB	Var2,Port2
+	BRA	main_loop
+	
+;Avbrottsrutin ökar 'Var2' med 1
+IrqR:
+	INC 	Var2
+	RTI
+	
+;Vars
+Var1:	RMB	1
+Var2:	RMB	1
