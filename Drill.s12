@@ -1,0 +1,48 @@
+;Drill.s12
+;definitions
+
+#define 	RUNFAST
+#define		SIMULATOR
+;		ORG 	$1000
+	
+OutPort		EQU	$700
+	
+main:
+	;initialize drill
+	
+	
+	
+;mainprogram,wait for chosen operation
+main_loop:
+	JSR 	GetKbdML15
+	NOP
+	JSR 	Command
+	NOP
+	BRA	main_loop
+	
+	
+	
+; here your shitty command routine with tabels
+Command:
+	CMPB	#7
+	BHI	CommandExit
+	LDX	#JUMPTAB
+	;offset 2 bytes
+	ASLB
+	LDX	B,X ; get address of chosen subroutine
+	JSR	,X	;do subroutine
+CommandExit:
+	RTS
+Auto:
+	LDX 	#Pattern
+	JSR	DoAuto
+	;USE ML15drvr.s12
+	
+;global variables shit
+	USE 	Labdefs.s12
+	USE	KeyboardML15.s12
+	USE	Delay.s12
+	USE	Subroutines.s12
+DCShadow: 	RMB	1
+Pattern:	FCB	0,1,1,1,1,1,1,1,2,1,5,2,2,2,2,4,4,3,8,2,$FF
+JUMPTAB		FDB MotorStart,MotorStop,DrillDown,DrillUp,Step,DrillHole,RefPos,Auto
