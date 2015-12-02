@@ -1,12 +1,15 @@
 	ORG	$1000
-	
+DISP_Stack_Addr EQU	$3000
+
 ;inita
 Kernel:
 ;Initiera avbrottsvektor IRQ
 	LDAA	#$0
-	STAA	#Running_status
+	STAA	Running_status
 	LDX	#IrqR
 	STX	$3FF2
+	LDD	#DISP_Stack_Addr
+	STD	DispSP
 	CLI
 	JSR	main_loop
 	
@@ -16,17 +19,20 @@ IrqR:
 	BNE	Irq_disp_to_drill		;if not zero(disp running) stop disp start drill
 	BRA	Irq_drill_to_disp
 Irq_disp_to_drill:			;Borr ska avbrytas kör display
-	STS	#DispSP
-	LDS	#BorrSP
+	STS	DispSP
+	LDS	BorrSP
 	LDAA	#$0			; Set running status to 0(drill running)
-	STAA	#Running_status		
-	;noll ställ avbrottsvippan?
+	STAA	Running_status		
+	CLR	ML19_AckIrq_1 ;noll ställ avbrottsvippan?
+	CLR	ML19_AckIrq_2
 	RTI		;Display ska avbrytar kör borr
 Irq_drill_to_disp:
-	STS	#BorrSP
-	LDS	#DispSP
+	STS	BorrSP
+	LDS	DispSP
 	LDAA	#$1			; Set running status to 1(disp running)
-	STAA	#Running_status
+	STAA	Running_status
+	CLR	ML19_AckIrq_1 ;noll ställ avbrottsvippan?
+	CLR	ML19_AckIrq_2
 	RTI
 ;data area
 ;Vars
@@ -34,6 +40,16 @@ Running_status:	RMB	1	;0 = Borr körs, 1 = Display körs
 
 BorrSP:	RMB	2
 DispSP:	RMB	2
+;Stack for DISP
+		ORG	DISP_Stack_Addr
+		FCB	$C0		;Initialt CC-värde (Obs att I=0)
+		FCB	0		;Initialt B-värde
+		FCB	0		;Initialt A-värde
+		FDB	0		;Initalt X-värde
+		FDB	0		;Initalt Y-värde		
+		FDB	DISPLAY		;Initalt PC-värde		
+		
+
 ;Use
 	USE 	Drill.s12
 	USE	Display_ML5.s12
