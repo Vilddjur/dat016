@@ -11,7 +11,7 @@ Kernel:
 	LDD	#DISP_Stack_Addr
 	STD	DispSP
 	CLI
-	JSR	main_loop
+	JMP	main_loop
 	
 IrqR:
 	LDAA	Running_status
