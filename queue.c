@@ -46,6 +46,7 @@ void add(QueuePtr q, int prio, DataPtr d) {
 }
 
 DataPtr get_first(QueuePtr q){
+  if(!q->next) return NULL;
   return q->next->data;
 }
 
