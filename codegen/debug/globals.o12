@@ -1,0 +1,14 @@
+mod:globals:O12:globals.o12
+seg:text:0
+seg:bss:33
+seg:data:0
+seg:rodata:0
+C:bss	00000000000000000000000000000000
+C:bss	00000000000000000000000000000000
+C:bss	00
+G:bss:globals:00000002:_longint
+G:bss:globals:0000001C:_komplex
+G:bss:globals:00000000:_shortint
+G:bss:globals:00000008:_intvec
+G:bss:globals:00000006:_jusint
+e

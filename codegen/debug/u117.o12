@@ -1,0 +1,9 @@
+mod:u117:O12:u117.o12
+seg:text:19
+seg:bss:0
+seg:data:0
+seg:rodata:0
+C:text	1B9BCC00016C83CC00026C81C6036B80
+C:text	1B853D
+G:text:u117:00000000:_main
+e
