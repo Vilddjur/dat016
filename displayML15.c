@@ -3,18 +3,14 @@
 void display_digits(unsigned char data[]){
 	int i = 0;
 	DISP_MODE = 1;
+	DISP_DATA = 0xD0;
+	DISP_MODE = 0;
 	for(i=0;i<6;i++){
 		DISP_DATA = *data;
 		data++;
 	}
-	/*
-	while(*data){
-		DISP_DATA = *data;
-		data++;
-	}*/
 	DISP_DATA = 0;
 	DISP_DATA = 0;
-	DISP_MODE = 0;
 }
 
 void display_dec(unsigned int input){
