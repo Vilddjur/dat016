@@ -45,10 +45,7 @@
 #-----------------------------------------------
 #PROJECT FILES SECTION
 
-FILES= \
-	"C:\Users\oskarje\appstart.s12" "" "1"  \
-	"C:\Users\oskarje\keyboardML15.c" "" "1"  \
-	"C:\Users\oskarje\keyboardML15.h" "" "1" 
+FILES=
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
 
@@ -64,9 +61,7 @@ LNFLAGS=-g -i default.lsc
 #-----------------------------------------------
 #OBJECT FILES SECTION
 
-OBJ= \
-	"debug\appstart.o12" \
-	"debug\keyboardML15.o12"
+OBJ=
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -107,28 +102,18 @@ LIBPATH=
 
 # Application
 "debug\uppgift2_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift2_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\uppgift2_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "debug\uppgift2_Debug.s19"
-	RMFI "debug\appstart.o12"
-	RMFI "debug\keyboardML15.o12"
-	RMFI "debug\keyboardML15.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"debug\appstart.o12":	\
-	"C:/Users/oskarje/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\appstart.o12" "C:/Users/oskarje/appstart.s12"
-"debug\keyboardML15.o12":	\
-	"C:/Users/oskarje/keyboardML15.c"\
-	"C:/Users/oskarje/keyboardML15.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\keyboardML15.o12" "C:/Users/oskarje/keyboardML15.c"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -143,9 +128,7 @@ LNFLAGS=-i default.lsc
 #-----------------------------------------------
 #OBJECT FILES SECTION
 
-OBJ= \
-	"final\appstart.o12" \
-	"final\keyboardML15.o12"
+OBJ=
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -188,27 +171,16 @@ LIBPATH=
 
 # Application
 "final\uppgift2_Final.s19": $(OBJ)
-	LINK -o"final\uppgift2_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\uppgift2_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "final\uppgift2_Final.s19"
-	RMFI "final\appstart.o12"
-	RMFI "final\keyboardML15.o12"
-	RMFI "final\keyboardML15.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"final\appstart.o12":	\
-	"C:/Users/oskarje/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\appstart.o12" "C:/Users/oskarje/appstart.s12"
-"final\keyboardML15.o12":	\
-	"C:/Users/oskarje/keyboardML15.c"\
-	"C:/Users/oskarje/keyboardML15.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\keyboardML15.o12" "C:/Users/oskarje/keyboardML15.c"
 !EICONF	Final

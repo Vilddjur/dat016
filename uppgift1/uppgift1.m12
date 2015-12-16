@@ -46,10 +46,7 @@
 #-----------------------------------------------
 #PROJECT FILES SECTION
 
-FILES= \
-	"C:\Users\oskarje\ports.h" "" "1"  \
-	"C:\Users\oskarje\appstart.s12" "" "1"  \
-	"C:\Users\oskarje\main.c" "" "1" 
+FILES=
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
 
@@ -65,9 +62,7 @@ LNFLAGS=-g -i default.lsc
 #-----------------------------------------------
 #OBJECT FILES SECTION
 
-OBJ= \
-	"debug\appstart.o12" \
-	"debug\main.o12"
+OBJ=
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -108,28 +103,18 @@ LIBPATH=
 
 # Application
 "debug\uppgift1_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift1_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\uppgift1_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "debug\uppgift1_Debug.s19"
-	RMFI "debug\ports.o12"
-	RMFI "debug\appstart.o12"
-	RMFI "debug\main.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"debug\appstart.o12":	\
-	"C:/Users/oskarje/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\appstart.o12" "C:/Users/oskarje/appstart.s12"
-"debug\main.o12":	\
-	"C:/Users/oskarje/main.c"\
-	"C:/Users/oskarje/ports.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\main.o12" "C:/Users/oskarje/main.c"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -144,9 +129,7 @@ LNFLAGS=-i default.lsc
 #-----------------------------------------------
 #OBJECT FILES SECTION
 
-OBJ= \
-	"final\appstart.o12" \
-	"final\main.o12"
+OBJ=
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -189,27 +172,16 @@ LIBPATH=
 
 # Application
 "final\uppgift1_Final.s19": $(OBJ)
-	LINK -o"final\uppgift1_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\uppgift1_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
 # Clean
 clean:
 	RMFI "final\uppgift1_Final.s19"
-	RMFI "final\ports.o12"
-	RMFI "final\appstart.o12"
-	RMFI "final\main.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
-"final\appstart.o12":	\
-	"C:/Users/oskarje/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\appstart.o12" "C:/Users/oskarje/appstart.s12"
-"final\main.o12":	\
-	"C:/Users/oskarje/main.c"\
-	"C:/Users/oskarje/ports.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\main.o12" "C:/Users/oskarje/main.c"
 !EICONF	Final

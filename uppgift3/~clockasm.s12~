@@ -1,0 +1,11 @@
+	export _reset_i
+	export _irq_rut
+	
+	import _clock_inter
+_reset_i:
+	CLI
+	RTS
+_irq_rut:
+	JSR _clock_inter
+	RTI
+	
