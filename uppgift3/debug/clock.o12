@@ -1,76 +1,74 @@
 mod:clock:O12:clock.o12
-seg:text:126
+seg:text:122
 seg:bss:4
 seg:data:0
 seg:rodata:0
-C:text	A7A787C77C00027C0000CC00007C3FF0
-C:text	C6107B003BC680FA00387B0038160000
-C:text	3D
-C:text	A7A7FC00023B1600001B82FD0000FC00
-C:text	02C300012401027D00007C0002C680FA
-C:text	00377B00373D
-C:text	A7A7CD0000CC000A3B35FD0000FC0002
-C:text	3B351600001B883D
-C:text	A71B9C1600006D806C82ED80EC823B35
-C:text	1600003B351600001B8826EE1B843D
+C:text	A787C77C00027C0000CC00007C3FF0C6
+C:text	107B003BC680FA00387B00381600003D
+C:text	A7FC00023B1600001B82FD0000FC0002
+C:text	C300012401027D00007C0002C680FA00
+C:text	377B00373D
+C:text	A7CD0000CC000A3B35FD0000FC00023B
+C:text	351600001B883D
+C:text	1B9C1600006D806C82ED80EC823B3516
+C:text	00003B351600001B8826EE1B843D
 C:bss	00000000
-RG:text:clock:0000000B:O:W:_irq_rut:46
-RG:text:clock:0000001E:O:W:_reset_i:63
-RG:text:clock:00000028:O:W:_display_dec:89
-RG:text:clock:0000005A:O:W:mulu32:135
-RG:text:clock:00000063:O:W:_get_time:162
-RG:text:clock:00000070:O:W:_get_time:173
-RG:text:clock:00000075:O:W:cmp32:176
-RL:text:clock:00000005:O:W:00000000:bss:42
-RL:text:clock:00000008:O:W:00000000:bss:43
-RL:text:clock:00000024:O:W:00000000:bss:87
-RL:text:clock:0000002D:O:W:00000000:bss:93
-RL:text:clock:00000030:O:W:00000000:bss:94
-RL:text:clock:00000039:O:W:00000000:bss:98
-RL:text:clock:0000003C:O:W:00000000:bss:99
-RL:text:clock:00000052:O:W:00000000:bss:131
-RL:text:clock:00000055:O:W:00000000:bss:132
-G:text:clock:00000060:_hold
-G:text:clock:00000001:_init_clock
-G:text:clock:00000048:_get_time
-G:text:clock:00000022:_clock_inter
-SY:C:M:clock$C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.c
+RG:text:clock:0000000A:O:W:_irq_rut:45
+RG:text:clock:0000001D:O:W:_reset_i:62
+RG:text:clock:00000026:O:W:_display_dec:87
+RG:text:clock:00000057:O:W:mulu32:131
+RG:text:clock:0000005F:O:W:_get_time:159
+RG:text:clock:0000006C:O:W:_get_time:172
+RG:text:clock:00000071:O:W:cmp32:175
+RL:text:clock:00000004:O:W:00000000:bss:41
+RL:text:clock:00000007:O:W:00000000:bss:42
+RL:text:clock:00000022:O:W:00000000:bss:85
+RL:text:clock:0000002B:O:W:00000000:bss:91
+RL:text:clock:0000002E:O:W:00000000:bss:92
+RL:text:clock:00000037:O:W:00000000:bss:96
+RL:text:clock:0000003A:O:W:00000000:bss:97
+RL:text:clock:0000004F:O:W:00000000:bss:127
+RL:text:clock:00000052:O:W:00000000:bss:128
+G:text:clock:0000005C:_hold
+G:text:clock:00000000:_init_clock
+G:text:clock:00000045:_get_time
+G:text:clock:00000020:_clock_inter
+SY:C:M:clock$C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.c
 SY:C:S:S:clock:bss:clock:00000000:(typ2)
-SY:C:F:clock:text:_init_clock:00000001:9
-SY:C:X:clock:9:1:text:1
-SY:C:X:clock:11:2:text:2
-SY:C:X:clock:12:2:text:A
-SY:C:X:clock:14:2:text:10
-SY:C:X:clock:18:2:text:15
-SY:C:X:clock:19:2:text:1D
-SY:C:X:clock:22:1:text:20
-SY:C:Z:clock:22:1:text:20
-SY:C:E:clock:text:_init_clock:00000021:22
-SY:C:F:clock:text:_clock_inter:00000022:24
-SY:C:X:clock:24:1:text:22
-SY:C:X:clock:25:3:text:23
-SY:C:X:clock:26:2:text:2C
-SY:C:X:clock:27:2:text:3E
-SY:C:X:clock:29:1:text:46
-SY:C:Z:clock:29:1:text:46
-SY:C:E:clock:text:_clock_inter:00000047:29
-SY:C:F:clock:text:_get_time:00000048:30
-SY:C:X:clock:30:1:text:48
-SY:C:X:clock:32:1:text:49
-SY:C:X:clock:33:1:text:5E
-SY:C:Z:clock:33:1:text:5E
-SY:C:E:clock:text:_get_time:0000005F:33
-SY:C:F:clock:text:_hold:00000060:34
-SY:C:X:clock:34:1:text:60
+SY:C:F:clock:text:_init_clock:00000000:9
+SY:C:X:clock:9:1:text:0
+SY:C:X:clock:11:10:text:1
+SY:C:X:clock:12:28:text:9
+SY:C:X:clock:14:23:text:F
+SY:C:X:clock:18:24:text:14
+SY:C:X:clock:19:9:text:1C
+SY:C:X:clock:22:1:text:1F
+SY:C:Z:clock:22:1:text:1F
+SY:C:E:clock:text:_init_clock:00000020:22
+SY:C:F:clock:text:_clock_inter:00000020:24
+SY:C:X:clock:24:1:text:20
+SY:C:X:clock:25:24:text:21
+SY:C:X:clock:26:6:text:2A
+SY:C:X:clock:27:24:text:3C
+SY:C:X:clock:29:1:text:44
+SY:C:Z:clock:29:1:text:44
+SY:C:E:clock:text:_clock_inter:00000045:29
+SY:C:F:clock:text:_get_time:00000045:30
+SY:C:X:clock:30:1:text:45
+SY:C:X:clock:33:1:text:5B
+SY:C:Z:clock:33:1:text:5B
+SY:C:E:clock:text:_get_time:0000005C:33
+SY:C:F:clock:text:_hold:0000005C:34
+SY:C:X:clock:34:1:text:5C
 SY:C:S:F:clock:hold:_hold:(typ0)(typ2)
 SY:C:S:L:clock:hold:input:6:(typ2)
 SY:C:S:F:clock:__func__:___func__:(typ11)
 SY:C:S:L:clock:hold:start_time:0:(typ2)
-SY:C:X:clock:36:23:text:62
-SY:C:X:clock:38:1:text:69
-SY:C:X:clock:39:1:text:7B
-SY:C:Z:clock:39:1:text:7B
-SY:C:E:clock:text:_hold:0000007E:39
+SY:C:X:clock:36:23:text:5E
+SY:C:X:clock:38:7:text:65
+SY:C:X:clock:39:1:text:77
+SY:C:Z:clock:39:1:text:77
+SY:C:E:clock:text:_hold:0000007A:39
 SY:C:T:  typ0 V (-1)
 SY:C:T:  typ1 L (4)
 SY:C:T:  typ2 l (4)

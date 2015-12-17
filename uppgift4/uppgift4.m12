@@ -4,6 +4,7 @@
 #
 #-----------------------------------------------
 #SETTINGS SECTION
+##CSIMSET=".\drill_and_key.hc12sim"
 ##EXTMAKEFILE=""
 ##EXTMAKEFILEPARAM=""
 #+[BackCol(0)]=
@@ -36,12 +37,87 @@
 #+0
 #+[EXonI(0)(0)]=
 #+0
+#+[BackCol(1)]=
+#+0
+#+[TextCol(1)]=
+#+0
+#+[NewLine(1)]=
+#+0
+#+[LineFeed(1)]=
+#+0
+#+[LoadCom(1)]=
+#+
+#+[Baud(1)(0)]=
+#+0
+#+[Baud(1)(1)]=
+#+0
+#+[Baud(1)(2)]=
+#+0
+#+[Dtr(1)(0)]=
+#+0
+#+[Dtr(1)(1)]=
+#+0
+#+[Dtr(1)(2)]=
+#+0
+#+[Rts(1)(0)]=
+#+0
+#+[Rts(1)(1)]=
+#+0
+#+[Rts(1)(2)]=
+#+0
+#+[Cts(1)(0)]=
+#+0
+#+[Cts(1)(1)]=
+#+0
+#+[Cts(1)(2)]=
+#+0
+#+[Dsr(1)(0)]=
+#+0
+#+[Dsr(1)(1)]=
+#+0
+#+[Dsr(1)(2)]=
+#+0
+#+[ByteS(1)(0)]=
+#+0
+#+[ByteS(1)(1)]=
+#+0
+#+[ByteS(1)(2)]=
+#+0
+#+[Parity(1)(0)]=
+#+0
+#+[Parity(1)(1)]=
+#+0
+#+[Parity(1)(2)]=
+#+0
+#+[StopB(1)(0)]=
+#+0
+#+[StopB(1)(1)]=
+#+0
+#+[StopB(1)(2)]=
+#+0
+#+[EXonO(1)(0)]=
+#+0
+#+[EXonO(1)(1)]=
+#+0
+#+[EXonO(1)(2)]=
+#+0
+#+[EXonI(1)(0)]=
+#+0
+#+[EXonI(1)(1)]=
+#+0
+#+[EXonI(1)(2)]=
+#+0
 #-----------------------------------------------
 ##TYPE E
 ##USESTARTUP=0
 ##OTYPE=1
 #-----------------------------------------------
 #OPEN FILE SECTION
+##OF "..\clock.c"
+##OF "..\drill.c"
+##OF "..\keyboardML15.c"
+##OF "..\mainUppg54.c"
+##OF "..\appstart.s12"
 #-----------------------------------------------
 #PROJECT FILES SECTION
 
@@ -53,7 +129,11 @@ FILES= \
 	"..\mainUppg54.c" "" "1"  \
 	".\clockasm.s12" "" "1"  \
 	"..\clock.c" "" "1"  \
-	"..\clock.h" "" "1" 
+	"..\clock.h" "" "1"  \
+	"..\displayML15.c" "" "1"  \
+	"..\displayML15.h" "" "1"  \
+	"..\keyboardML15.c" "" "1"  \
+	"..\keyboardML15.h" "" "1" 
 #-----------------------------------------------
 #PROJECT OPTIONS SECTION
 
@@ -74,7 +154,9 @@ OBJ= \
 	"debug\appstart.o12" \
 	"debug\mainUppg54.o12" \
 	"debug\clockasm.o12" \
-	"debug\clock.o12"
+	"debug\clock.o12" \
+	"debug\displayML15.o12" \
+	"debug\keyboardML15.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -115,7 +197,7 @@ LIBPATH=
 
 # Application
 "debug\uppgift4_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift4_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\uppgift4_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -130,32 +212,45 @@ clean:
 	RMFI "debug\clockasm.o12"
 	RMFI "debug\clock.o12"
 	RMFI "debug\clock.o12"
+	RMFI "debug\displayML15.o12"
+	RMFI "debug\displayML15.o12"
+	RMFI "debug\keyboardML15.o12"
+	RMFI "debug\keyboardML15.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
 "debug\drill.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/drill.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/drill.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/ports.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/clock.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\drill.o12" "C:/Users/Maxim/Desktop/PIS/dat016/drill.c"
+	"C:/Users/oskarje/Documents/GitHub/dat016/drill.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/drill.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/ports.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\drill.o12" "C:/Users/oskarje/Documents/GitHub/dat016/drill.c"
 "debug\appstart.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\appstart.o12" "C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\appstart.o12" "C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
 "debug\mainUppg54.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/mainUppg54.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/drill.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\mainUppg54.o12" "C:/Users/Maxim/Desktop/PIS/dat016/mainUppg54.c"
+	"C:/Users/oskarje/Documents/GitHub/dat016/mainUppg54.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/drill.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\mainUppg54.o12" "C:/Users/oskarje/Documents/GitHub/dat016/mainUppg54.c"
 "debug\clockasm.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift4/clockasm.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\clockasm.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift4/clockasm.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift4/clockasm.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\clockasm.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift4/clockasm.s12"
 "debug\clock.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/clock.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/clock.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/displayML15.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\clock.o12" "C:/Users/Maxim/Desktop/PIS/dat016/clock.c"
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\clock.o12" "C:/Users/oskarje/Documents/GitHub/dat016/clock.c"
+"debug\displayML15.o12":	\
+	"C:/Users/oskarje/Documents/GitHub/dat016/displayML15.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\displayML15.o12" "C:/Users/oskarje/Documents/GitHub/dat016/displayML15.c"
+"debug\keyboardML15.o12":	\
+	"C:/Users/oskarje/Documents/GitHub/dat016/keyboardML15.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/keyboardML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\keyboardML15.o12" "C:/Users/oskarje/Documents/GitHub/dat016/keyboardML15.c"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -175,7 +270,9 @@ OBJ= \
 	"final\appstart.o12" \
 	"final\mainUppg54.o12" \
 	"final\clockasm.o12" \
-	"final\clock.o12"
+	"final\clock.o12" \
+	"final\displayML15.o12" \
+	"final\keyboardML15.o12"
 #-----------------------------------------------
 #DEFINES/UNDEFINES SECTION
 
@@ -218,7 +315,7 @@ LIBPATH=
 
 # Application
 "final\uppgift4_Final.s19": $(OBJ)
-	LINK -o"final\uppgift4_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\uppgift4_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -233,33 +330,48 @@ clean:
 	RMFI "final\clockasm.o12"
 	RMFI "final\clock.o12"
 	RMFI "final\clock.o12"
+	RMFI "final\displayML15.o12"
+	RMFI "final\displayML15.o12"
+	RMFI "final\keyboardML15.o12"
+	RMFI "final\keyboardML15.o12"
 #-----------------------------------------------
 
 
 # Dependencies and their build rules
 
 "final\drill.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/drill.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/drill.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/ports.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/clock.h"
+	"C:/Users/oskarje/Documents/GitHub/dat016/drill.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/drill.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/ports.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files\GMV\EducDist\bin\..\include" $(INC) -o"final\drill.o12" "C:/Users/Maxim/Desktop/PIS/dat016/drill.c"
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\drill.o12" "C:/Users/oskarje/Documents/GitHub/dat016/drill.c"
 "final\appstart.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\appstart.o12" "C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\appstart.o12" "C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
 "final\mainUppg54.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/mainUppg54.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/drill.h"
+	"C:/Users/oskarje/Documents/GitHub/dat016/mainUppg54.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/drill.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files\GMV\EducDist\bin\..\include" $(INC) -o"final\mainUppg54.o12" "C:/Users/Maxim/Desktop/PIS/dat016/mainUppg54.c"
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\mainUppg54.o12" "C:/Users/oskarje/Documents/GitHub/dat016/mainUppg54.c"
 "final\clockasm.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift4/clockasm.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\clockasm.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift4/clockasm.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift4/clockasm.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\clockasm.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift4/clockasm.s12"
 "final\clock.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/clock.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/clock.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/displayML15.h"
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/clock.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/displayML15.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files\GMV\EducDist\bin\..\include" $(INC) -o"final\clock.o12" "C:/Users/Maxim/Desktop/PIS/dat016/clock.c"
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\clock.o12" "C:/Users/oskarje/Documents/GitHub/dat016/clock.c"
+"final\displayML15.o12":	\
+	"C:/Users/oskarje/Documents/GitHub/dat016/displayML15.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\displayML15.o12" "C:/Users/oskarje/Documents/GitHub/dat016/displayML15.c"
+"final\keyboardML15.o12":	\
+	"C:/Users/oskarje/Documents/GitHub/dat016/keyboardML15.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/keyboardML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\keyboardML15.o12" "C:/Users/oskarje/Documents/GitHub/dat016/keyboardML15.c"
 !EICONF	Final

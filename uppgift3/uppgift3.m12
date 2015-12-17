@@ -42,6 +42,7 @@
 ##OTYPE=1
 #-----------------------------------------------
 #OPEN FILE SECTION
+##OF ".\clock.c"
 #-----------------------------------------------
 #PROJECT FILES SECTION
 
@@ -115,7 +116,7 @@ LIBPATH=
 
 # Application
 "debug\uppgift3_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift3_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\uppgift3_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -136,24 +137,24 @@ clean:
 # Dependencies and their build rules
 
 "debug\clockasm.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clockasm.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\clockasm.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clockasm.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clockasm.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\clockasm.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clockasm.s12"
 "debug\clock.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\clock.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.c"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\clock.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.c"
 "debug\appstart.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\appstart.o12" "C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"debug\appstart.o12" "C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
 "debug\main.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/main.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\main.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/main.c"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/main.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\main.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/main.c"
 "debug\displayML15.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.h"
-	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\displayML15.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.c"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.h"
+	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  $(INC) -o"debug\displayML15.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.c"
 !EICONF	Debug
 
 !IFCONF	Final
@@ -216,7 +217,7 @@ LIBPATH=
 
 # Application
 "final\uppgift3_Final.s19": $(OBJ)
-	LINK -o"final\uppgift3_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\uppgift3_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -237,25 +238,25 @@ clean:
 # Dependencies and their build rules
 
 "final\clockasm.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clockasm.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\clockasm.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clockasm.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clockasm.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\clockasm.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clockasm.s12"
 "final\clock.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.h"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.h"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.h"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files\GMV\EducDist\bin\..\include" $(INC) -o"final\clock.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.c"
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\clock.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.c"
 "final\appstart.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
-	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\appstart.o12" "C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12"
+	"C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
+	ASSM  $(ASFLAGS) $(ASMDEF) -o"final\appstart.o12" "C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12"
 "final\main.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/main.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/clock.h"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/main.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/clock.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files\GMV\EducDist\bin\..\include" $(INC) -o"final\main.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/main.c"
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\main.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/main.c"
 "final\displayML15.o12":	\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.c"\
-	"C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.h"
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.c"\
+	"C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.h"
 	COMP  $(CCFLAGS) $(DEF) $(UNDEF)  \
-	-I"C:\Program Files\GMV\EducDist\bin\..\include" $(INC) -o"final\displayML15.o12" "C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/displayML15.c"
+	-I"C:\Program Files (x86)\GMV\EducDist\bin\..\include" $(INC) -o"final\displayML15.o12" "C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.c"
 !EICONF	Final

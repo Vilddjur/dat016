@@ -8,7 +8,7 @@ typedef voidfuncptr *vector;
 #ifdef SIMULATOR
 #define irqAddr 0x3FF0
 #else
-#define irqAddr 0x3FF3
+#define irqAddr 0x3FF0
 #endif	
 
 #define CRGINT_ADDR 0x0038

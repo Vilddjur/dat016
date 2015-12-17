@@ -1,19 +1,18 @@
 mod:main:O12:main.o12
-seg:text:8
+seg:text:7
 seg:bss:0
 seg:data:0
 seg:rodata:0
-C:text	A7A716000087C73D
-RG:text:main:00000003:O:W:_init_clock:30
-G:text:main:00000001:_main
-SY:C:M:main$C:/Users/Maxim/Desktop/PIS/dat016/uppgift3/main.c
-SY:C:F:main:text:_main:00000001:3
-SY:C:X:main:3:1:text:1
-SY:C:X:main:5:2:text:2
-SY:C:X:main:6:1:text:5
-SY:C:X:main:8:1:text:7
-SY:C:Z:main:8:1:text:7
-SY:C:E:main:text:_main:00000008:8
+C:text	A716000087C73D
+RG:text:main:00000002:O:W:_init_clock:29
+G:text:main:00000000:_main
+SY:C:M:main$C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/main.c
+SY:C:F:main:text:_main:00000000:3
+SY:C:X:main:3:1:text:0
+SY:C:X:main:5:12:text:1
+SY:C:X:main:8:1:text:6
+SY:C:Z:main:8:1:text:6
+SY:C:E:main:text:_main:00000007:8
 SY:C:T:  typ0 V (-1)
 SY:C:T:  typ1 L (4)
 SY:C:T:  typ2 l (4)

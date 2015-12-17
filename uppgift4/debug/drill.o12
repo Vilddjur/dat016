@@ -1,247 +1,285 @@
 mod:drill:O12:drill.o12
-seg:text:444
+seg:text:590
 seg:bss:0
-seg:data:17
+seg:data:59
 seg:rodata:0
-C:text	A71B9CEC868C0007221A59CE00001AE6
-C:text	EC006C8241516C80F60000B714E481A4
-C:text	807B0000F600007B04001B843D
-C:text	A71B9EEC848C0007221659CE00001AE6
-C:text	EC006C80F60000B714EA81AA807B0000
-C:text	F600007B04001B823D
-C:text	A71B9CEC86CD00006D806C823B351600
-C:text	001B841B843D
-C:text	A7A7CC00023B1600001B82CC03E83B16
-C:text	00001B823D
-C:text	A7A7CC00023B1600001B82CC03E83B16
-C:text	00001B823D
-C:text	A7A7CC00033B1600001B823D
-C:text	A7A7CC00033B1600001B823D
-C:text	A787C73D
-C:text	A71B9ECC00146C80EC808C0000271CF6
-C:text	0600C4042705CC0001201BCC00FA3B16
-C:text	00001B82EE80096E8020DDCC00023B16
-C:text	00001B8287C71B823D
-C:text	A7EC828C000018270034CC00043B1600
-C:text	001B82CC01F43B1600001B82CC00043B
-C:text	1600001B82ED82036D82EC828C000027
-C:text	09CC00FA3B1600001B821820FFC33D
-C:text	A71B9E87C76C801600001600006C8016
-C:text	0000EC801B823D
-C:text	A71B9ECC00016C80F60600C401261016
-C:text	00008C0000260687C76C80200420E9EC
-C:text	801B823D
-C:text	A7A73D
-C:text	A71B9ECC00016C80F60600C4022611CC
-C:text	00023B1600001B8287C76C801820002F
-C:text	87C73B1600001B82CC00013B1600001B
-C:text	82CD0000CC01F43B351600001B84CC00
-C:text	013B1600001B8287C73B1600001B82EC
-C:text	801B823D
+C:text	1B9CEC868C0007221EEC8659CE00001A
+C:text	E6EC006C82EC8241516C80F60000B714
+C:text	E481A4807B0000F600007B04001B843D
+C:text	1B9EEC848C00072218EC8459CE00001A
+C:text	E6EC006C80F60000B714EA81AA807B00
+C:text	00F600007B04001B823D
+C:text	1B9CEC86CD00006D806C82ED80EC823B
+C:text	351600001B841B843D
+C:text	A7CC00023B1600001B82CC03E83B1600
+C:text	001B823D
+C:text	A7CC00023B1600001B823D
+C:text	A7CC00033B1600001B823D
+C:text	A7CC00033B1600001B823D
+C:text	1B9E87C76C80EC848C00002717EE8409
+C:text	6E841600006C80EC808C0000260487C7
+C:text	200520E2CC00011B823D
+C:text	1B9ECC00146C80EC808C0000271CF606
+C:text	00C4042705CC0001201BCC00FA3B1600
+C:text	001B82EE80096E8020DDCC00023B1600
+C:text	001B8287C71B823D
+C:text	EC828C000018270034CC00043B160000
+C:text	1B82CC01F43B1600001B82CC00043B16
+C:text	00001B82ED82036D82EC828C00002709
+C:text	CC00FA3B1600001B821820FFC33D
+C:text	1B9E87C76C801600001600006C801600
+C:text	00CC03E83B1600001B82EC801B823D
+C:text	1B9ECC00016C80F60600C40126121600
+C:text	008C0000260887C76C80EC80200420E7
+C:text	EC801B823D
+C:text	1B9A87C76C846C826C801600006C84EC
+C:text	848C000026071600001820004F160000
+C:text	EC808C00142D0B1820003EEE80086E80
+C:text	20EEEC8059CE00001AE6EC006C82EC82
+C:text	3B1600001B826C84EC848C0000260516
+C:text	000020181600006C84EC848C00002605
+C:text	16000020071820FFC21600001B863D
+C:text	1B9ECC00016C80F60600C4022611CC00
+C:text	033B1600001B8287C76C801820002F87
+C:text	C73B1600001B82CC00013B1600001B82
+C:text	CD0000CC01F43B351600001B84CC0001
+C:text	3B1600001B8287C73B1600001B82EC80
+C:text	1B823D
 C:data	00000100020004000800100020004000
-C:data	80
-RG:text:drill:00000065:O:W:_hold:164
-RG:text:drill:00000073:O:W:_Outone:189
-RG:text:drill:0000007C:O:W:_delay:195
-RG:text:drill:00000088:O:W:_Outzero:223
-RG:text:drill:00000091:O:W:_delay:229
-RG:text:drill:0000009D:O:W:_Outone:255
-RG:text:drill:000000A9:O:W:_Outzero:281
-RG:text:drill:000000D2:O:W:_delay:355
-RG:text:drill:000000E2:O:W:_alarm:369
-RG:text:drill:000000FA:O:W:_Outone:407
-RG:text:drill:00000103:O:W:_delay:413
-RG:text:drill:0000010C:O:W:_Outzero:419
-RG:text:drill:00000121:O:W:_delay:435
-RG:text:drill:00000132:O:W:_DrillDown:471
-RG:text:drill:00000135:O:W:_DrillDownTest:474
-RG:text:drill:0000013A:O:W:_DrillUp:478
-RG:text:drill:00000151:O:W:_step:516
-RG:text:drill:0000017C:O:W:_Alarm:592
-RG:text:drill:0000018C:O:W:_Outone:608
-RG:text:drill:00000195:O:W:_Outone:614
-RG:text:drill:000001A2:O:W:_hold:622
-RG:text:drill:000001AB:O:W:_Outzero:628
-RG:text:drill:000001B3:O:W:_Outzero:635
-RL:text:drill:0000000C:O:W:00000001:data:60
-RL:text:drill:00000019:O:W:00000000:data:69
-RL:text:drill:00000022:O:W:00000000:data:73
-RL:text:drill:00000025:O:W:00000000:data:78
-RL:text:drill:00000039:O:W:00000001:data:113
-RL:text:drill:00000042:O:W:00000000:data:119
-RL:text:drill:0000004B:O:W:00000000:data:123
-RL:text:drill:0000004E:O:W:00000000:data:128
-G:text:drill:00000082:_MotorStop
-G:text:drill:000000A3:_DrillUp
-G:text:drill:00000169:_step
-G:text:drill:000000EC:_Alarm
-G:text:drill:00000001:_Outzero
-G:text:drill:000000AF:_Nstep
-G:text:drill:00000057:_delay
-G:text:drill:0000006D:_MotorStart
-G:text:drill:000000B3:_DrillDownTest
-G:text:drill:00000166:_DoAuto
-G:text:drill:00000142:_RefPos
-G:text:drill:0000002E:_Outone
-G:text:drill:0000012B:_DrillHole
-G:text:drill:00000097:_DrillDown
-SY:C:M:drill$C:/Users/Maxim/Desktop/PIS/dat016/drill.c
+C:data	80000000010001000100010001000100
+C:data	01000200010005000200020002000200
+C:data	04000400030008000200FF
+RG:text:drill:0000006C:O:W:_hold:203
+RG:text:drill:00000079:O:W:_Outone:227
+RG:text:drill:00000082:O:W:_delay:233
+RG:text:drill:0000008D:O:W:_Outzero:260
+RG:text:drill:00000098:O:W:_Outone:286
+RG:text:drill:000000A3:O:W:_Outzero:311
+RG:text:drill:000000BB:O:W:_step:358
+RG:text:drill:000000F1:O:W:_delay:424
+RG:text:drill:00000101:O:W:_alarm:438
+RG:text:drill:00000118:O:W:_Outone:476
+RG:text:drill:00000121:O:W:_delay:482
+RG:text:drill:0000012A:O:W:_Outzero:488
+RG:text:drill:0000013F:O:W:_delay:504
+RG:text:drill:0000014F:O:W:_DrillDown:541
+RG:text:drill:00000152:O:W:_DrillDownTest:544
+RG:text:drill:00000157:O:W:_DrillUp:548
+RG:text:drill:0000015E:O:W:_delay:553
+RG:text:drill:00000176:O:W:_step:592
+RG:text:drill:00000197:O:W:_RefPos:649
+RG:text:drill:000001A3:O:W:_MotorStop:658
+RG:text:drill:000001AA:O:W:_MotorStart:665
+RG:text:drill:000001CE:O:W:_Nstep:693
+RG:text:drill:000001DC:O:W:_MotorStop:703
+RG:text:drill:000001E1:O:W:_DrillHole:710
+RG:text:drill:000001ED:O:W:_MotorStop:719
+RG:text:drill:000001F6:O:W:_MotorStop:729
+RG:text:drill:0000020E:O:W:_alarm:770
+RG:text:drill:0000021E:O:W:_Outone:786
+RG:text:drill:00000227:O:W:_Outone:792
+RG:text:drill:00000234:O:W:_hold:800
+RG:text:drill:0000023D:O:W:_Outzero:806
+RG:text:drill:00000245:O:W:_Outzero:813
+RL:text:drill:0000000D:O:W:00000001:data:88
+RL:text:drill:0000001C:O:W:00000000:data:99
+RL:text:drill:00000025:O:W:00000000:data:103
+RL:text:drill:00000028:O:W:00000000:data:108
+RL:text:drill:0000003D:O:W:00000001:data:146
+RL:text:drill:00000046:O:W:00000000:data:153
+RL:text:drill:0000004F:O:W:00000000:data:157
+RL:text:drill:00000052:O:W:00000000:data:162
+RL:text:drill:000001C2:O:W:00000011:data:684
+G:text:drill:00000087:_MotorStop
+G:text:drill:0000009D:_DrillUp
+G:text:drill:000001FB:_step
+G:text:drill:00000000:_Outzero
+G:text:drill:000000A8:_Nstep
+G:text:drill:0000010A:_alarm
+G:text:drill:0000005A:_delay
+G:text:drill:00000073:_MotorStart
+G:text:drill:000000D2:_DrillDownTest
+G:text:drill:0000018C:_DoAuto
+G:text:drill:00000167:_RefPos
+G:text:drill:00000030:_Outone
+G:text:drill:00000148:_DrillHole
+G:text:drill:00000092:_DrillDown
+SY:C:M:drill$C:/Users/oskarje/Documents/GitHub/dat016/drill.c
 SY:C:S:S:drill:data:DCShadow:00000000:(typ3)
 SY:C:S:S:drill:data:dataMask:00000001:(typ16-drill)
-SY:C:F:drill:text:_Outzero:00000001:10
-SY:C:X:drill:10:1:text:1
+SY:C:S:S:drill:data:borr_auto:00000011:(typ17-drill)
+SY:C:F:drill:text:_Outzero:00000000:10
+SY:C:X:drill:10:1:text:0
 SY:C:S:F:drill:Outzero:_Outzero:(typ0)(typ12)
 SY:C:S:L:drill:Outzero:bit:6:(typ12)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:Outzero:maskWith:2:(typ11)
-SY:C:X:drill:11:12:text:3
-SY:C:X:drill:12:16:text:A
-SY:C:X:drill:13:3:text:14
-SY:C:X:drill:15:2:text:24
-SY:C:X:drill:17:1:text:2A
-SY:C:Z:drill:17:1:text:2A
-SY:C:E:drill:text:_Outzero:0000002D:17
-SY:C:F:drill:text:_Outone:0000002E:19
-SY:C:X:drill:19:1:text:2E
+SY:C:X:drill:11:3:text:2
+SY:C:X:drill:12:16:text:9
+SY:C:X:drill:13:35:text:15
+SY:C:X:drill:15:30:text:27
+SY:C:X:drill:17:1:text:2D
+SY:C:Z:drill:17:1:text:2D
+SY:C:E:drill:text:_Outzero:00000030:17
+SY:C:F:drill:text:_Outone:00000030:19
+SY:C:X:drill:19:1:text:30
 SY:C:S:F:drill:Outone:_Outone:(typ0)(typ12)
 SY:C:S:L:drill:Outone:bit:4:(typ12)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:Outone:maskWith:0:(typ11)
-SY:C:X:drill:20:12:text:30
-SY:C:X:drill:21:16:text:37
-SY:C:X:drill:22:3:text:41
-SY:C:X:drill:24:2:text:4D
-SY:C:X:drill:26:1:text:53
-SY:C:Z:drill:26:1:text:53
-SY:C:E:drill:text:_Outone:00000056:26
-SY:C:F:drill:text:_delay:00000057:27
-SY:C:X:drill:27:1:text:57
+SY:C:X:drill:20:3:text:32
+SY:C:X:drill:21:16:text:39
+SY:C:X:drill:22:32:text:45
+SY:C:X:drill:24:30:text:51
+SY:C:X:drill:26:1:text:57
+SY:C:Z:drill:26:1:text:57
+SY:C:E:drill:text:_Outone:0000005A:26
+SY:C:F:drill:text:_delay:0000005A:27
+SY:C:X:drill:27:1:text:5A
 SY:C:S:F:drill:delay:_delay:(typ0)(typ11)
 SY:C:S:L:drill:delay:input:6:(typ11)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:delay:temp:0:(typ2)
-SY:C:X:drill:28:17:text:59
-SY:C:X:drill:29:2:text:62
-SY:C:X:drill:30:1:text:69
-SY:C:Z:drill:30:1:text:69
-SY:C:E:drill:text:_delay:0000006C:30
-SY:C:F:drill:text:_MotorStart:0000006D:31
-SY:C:X:drill:31:1:text:6D
-SY:C:X:drill:32:2:text:6E
-SY:C:X:drill:33:2:text:77
-SY:C:X:drill:35:1:text:80
-SY:C:Z:drill:35:1:text:80
-SY:C:E:drill:text:_MotorStart:00000081:35
-SY:C:F:drill:text:_MotorStop:00000082:38
-SY:C:X:drill:38:1:text:82
-SY:C:X:drill:40:2:text:83
-SY:C:X:drill:41:2:text:8C
-SY:C:X:drill:42:1:text:95
-SY:C:Z:drill:42:1:text:95
-SY:C:E:drill:text:_MotorStop:00000096:42
-SY:C:F:drill:text:_DrillDown:00000097:44
-SY:C:X:drill:44:1:text:97
-SY:C:X:drill:46:2:text:98
-SY:C:X:drill:47:1:text:A1
-SY:C:Z:drill:47:1:text:A1
-SY:C:E:drill:text:_DrillDown:000000A2:47
-SY:C:F:drill:text:_DrillUp:000000A3:49
-SY:C:X:drill:49:1:text:A3
-SY:C:X:drill:51:2:text:A4
-SY:C:X:drill:52:1:text:AD
-SY:C:Z:drill:52:1:text:AD
-SY:C:E:drill:text:_DrillUp:000000AE:52
-SY:C:F:drill:text:_Nstep:000000AF:54
-SY:C:X:drill:54:1:text:AF
+SY:C:X:drill:28:17:text:5C
+SY:C:X:drill:29:10:text:65
+SY:C:X:drill:30:1:text:70
+SY:C:Z:drill:30:1:text:70
+SY:C:E:drill:text:_delay:00000073:30
+SY:C:F:drill:text:_MotorStart:00000073:31
+SY:C:X:drill:31:1:text:73
+SY:C:X:drill:32:9:text:74
+SY:C:X:drill:33:11:text:7D
+SY:C:X:drill:35:1:text:86
+SY:C:Z:drill:35:1:text:86
+SY:C:E:drill:text:_MotorStart:00000087:35
+SY:C:F:drill:text:_MotorStop:00000087:38
+SY:C:X:drill:38:1:text:87
+SY:C:X:drill:40:10:text:88
+SY:C:X:drill:42:1:text:91
+SY:C:Z:drill:42:1:text:91
+SY:C:E:drill:text:_MotorStop:00000092:42
+SY:C:F:drill:text:_DrillDown:00000092:44
+SY:C:X:drill:44:1:text:92
+SY:C:X:drill:46:9:text:93
+SY:C:X:drill:47:1:text:9C
+SY:C:Z:drill:47:1:text:9C
+SY:C:E:drill:text:_DrillDown:0000009D:47
+SY:C:F:drill:text:_DrillUp:0000009D:49
+SY:C:X:drill:49:1:text:9D
+SY:C:X:drill:51:10:text:9E
+SY:C:X:drill:52:1:text:A7
+SY:C:Z:drill:52:1:text:A7
+SY:C:E:drill:text:_DrillUp:000000A8:52
+SY:C:F:drill:text:_Nstep:000000A8:54
+SY:C:X:drill:54:1:text:A8
 SY:C:S:F:drill:Nstep:_Nstep:(typ11)(typ11)
-SY:C:S:L:drill:Nstep:input:2:(typ11)
+SY:C:S:L:drill:Nstep:input:4:(typ11)
 SY:C:S:F:drill:__func__:___func__:(typ11)
-SY:C:X:drill:56:1:text:AF
-SY:C:X:drill:57:1:text:B1
-SY:C:Z:drill:57:1:text:B1
-SY:C:E:drill:text:_Nstep:000000B2:57
-SY:C:F:drill:text:_DrillDownTest:000000B3:58
-SY:C:X:drill:58:1:text:B3
+SY:C:S:L:drill:Nstep:tmp:0:(typ11)
+SY:C:X:drill:56:9:text:AA
+SY:C:X:drill:57:7:text:AE
+SY:C:X:drill:58:7:text:B5
+SY:C:X:drill:59:14:text:BA
+SY:C:X:drill:60:4:text:BF
+SY:C:X:drill:65:1:text:CF
+SY:C:Z:drill:65:1:text:CF
+SY:C:E:drill:text:_Nstep:000000D2:65
+SY:C:F:drill:text:_DrillDownTest:000000D2:66
+SY:C:X:drill:66:1:text:D2
 SY:C:S:F:drill:DrillDownTest:_DrillDownTest:(typ11)(typ0)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:DrillDownTest:amount:0:(typ11)
-SY:C:X:drill:59:13:text:B5
-SY:C:X:drill:60:1:text:BA
-SY:C:X:drill:61:31:text:C1
-SY:C:X:drill:62:3:text:C8
-SY:C:X:drill:64:3:text:CD
-SY:C:X:drill:65:3:text:D6
-SY:C:X:drill:67:2:text:DD
-SY:C:X:drill:68:1:text:E6
-SY:C:X:drill:69:1:text:E8
-SY:C:Z:drill:69:1:text:E8
-SY:C:E:drill:text:_DrillDownTest:000000EB:69
-SY:C:F:drill:text:_Alarm:000000EC:70
-SY:C:X:drill:70:1:text:EC
-SY:C:S:F:drill:Alarm:_Alarm:(typ0)(typ11)
-SY:C:S:L:drill:Alarm:amount:2:(typ11)
+SY:C:X:drill:67:13:text:D4
+SY:C:X:drill:68:7:text:D9
+SY:C:X:drill:69:4:text:E0
+SY:C:X:drill:72:11:text:EC
+SY:C:X:drill:73:8:text:F5
+SY:C:X:drill:75:8:text:FC
+SY:C:X:drill:77:1:text:107
+SY:C:Z:drill:77:1:text:107
+SY:C:E:drill:text:_DrillDownTest:0000010A:77
+SY:C:F:drill:text:_alarm:0000010A:78
+SY:C:X:drill:78:1:text:10A
+SY:C:S:F:drill:alarm:_alarm:(typ0)(typ11)
+SY:C:S:L:drill:alarm:amount:2:(typ11)
 SY:C:S:F:drill:__func__:___func__:(typ11)
-SY:C:X:drill:71:1:text:EC
-SY:C:X:drill:72:3:text:F5
-SY:C:X:drill:73:3:text:FE
-SY:C:X:drill:74:3:text:107
-SY:C:X:drill:75:3:text:110
-SY:C:X:drill:76:5:text:115
-SY:C:X:drill:77:4:text:11C
-SY:C:X:drill:81:1:text:129
-SY:C:Z:drill:81:1:text:129
-SY:C:E:drill:text:_Alarm:0000012A:81
-SY:C:F:drill:text:_DrillHole:0000012B:82
-SY:C:X:drill:82:1:text:12B
+SY:C:X:drill:79:7:text:10A
+SY:C:X:drill:80:10:text:113
+SY:C:X:drill:81:11:text:11C
+SY:C:X:drill:82:11:text:125
+SY:C:X:drill:83:10:text:12E
+SY:C:X:drill:84:4:text:133
+SY:C:X:drill:85:12:text:13A
+SY:C:X:drill:89:1:text:147
+SY:C:Z:drill:89:1:text:147
+SY:C:E:drill:text:_alarm:00000148:89
+SY:C:F:drill:text:_DrillHole:00000148:90
+SY:C:X:drill:90:1:text:148
 SY:C:S:F:drill:DrillHole:_DrillHole:(typ11)(typ0)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:DrillHole:temp:0:(typ11)
-SY:C:X:drill:83:11:text:12D
-SY:C:X:drill:84:2:text:131
-SY:C:X:drill:85:2:text:134
-SY:C:X:drill:86:2:text:139
-SY:C:X:drill:87:1:text:13C
-SY:C:X:drill:88:1:text:13E
-SY:C:Z:drill:88:1:text:13E
-SY:C:E:drill:text:_DrillHole:00000141:88
-SY:C:F:drill:text:_RefPos:00000142:89
-SY:C:X:drill:89:1:text:142
+SY:C:X:drill:91:11:text:14A
+SY:C:X:drill:92:11:text:14E
+SY:C:X:drill:93:23:text:151
+SY:C:X:drill:94:9:text:156
+SY:C:X:drill:95:11:text:159
+SY:C:X:drill:97:1:text:164
+SY:C:Z:drill:97:1:text:164
+SY:C:E:drill:text:_DrillHole:00000167:97
+SY:C:F:drill:text:_RefPos:00000167:98
+SY:C:X:drill:98:1:text:167
 SY:C:S:F:drill:RefPos:_RefPos:(typ11)(typ0)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:RefPos:result:0:(typ11)
-SY:C:X:drill:90:13:text:144
-SY:C:X:drill:91:1:text:149
-SY:C:X:drill:92:14:text:150
-SY:C:X:drill:93:4:text:158
-SY:C:X:drill:94:3:text:15C
-SY:C:X:drill:97:1:text:160
-SY:C:X:drill:98:1:text:162
-SY:C:Z:drill:98:1:text:162
-SY:C:E:drill:text:_RefPos:00000165:98
-SY:C:F:drill:text:_DoAuto:00000166:99
-SY:C:X:drill:99:1:text:166
-SY:C:X:drill:100:1:text:167
-SY:C:Z:drill:100:1:text:167
-SY:C:E:drill:text:_DoAuto:00000168:100
-SY:C:F:drill:text:_step:00000169:102
-SY:C:X:drill:102:1:text:169
-SY:C:S:F:drill:step:_step:(typ11)(typ11)
-SY:C:S:L:drill:step:n:4:(typ11)
+SY:C:X:drill:99:13:text:169
+SY:C:X:drill:100:7:text:16E
+SY:C:X:drill:101:4:text:175
+SY:C:X:drill:102:13:text:17D
+SY:C:X:drill:107:1:text:189
+SY:C:Z:drill:107:1:text:189
+SY:C:E:drill:text:_RefPos:0000018C:107
+SY:C:F:drill:text:_DoAuto:0000018C:108
+SY:C:X:drill:108:1:text:18C
+SY:C:S:F:drill:DoAuto:_DoAuto:(typ0)(typ0)
+SY:C:S:F:drill:__func__:___func__:(typ11)
+SY:C:S:L:drill:DoAuto:tmp:4:(typ11)
+SY:C:S:L:drill:DoAuto:b:2:(typ11)
+SY:C:S:L:drill:DoAuto:i:0:(typ11)
+SY:C:X:drill:111:10:text:18E
+SY:C:X:drill:112:15:text:196
+SY:C:X:drill:113:3:text:19B
+SY:C:X:drill:114:12:text:1A2
+SY:C:X:drill:117:12:text:1A9
+SY:C:X:drill:118:7:text:1AC
+SY:C:X:drill:118:12:text:1B7
+SY:C:X:drill:119:18:text:1BE
+SY:C:X:drill:121:16:text:1CA
+SY:C:X:drill:122:4:text:1D4
+SY:C:X:drill:123:13:text:1DB
+SY:C:X:drill:126:19:text:1E0
+SY:C:X:drill:127:4:text:1E5
+SY:C:X:drill:128:13:text:1EC
+SY:C:X:drill:132:11:text:1F5
+SY:C:X:drill:134:1:text:1F8
+SY:C:Z:drill:134:1:text:1F8
+SY:C:E:drill:text:_DoAuto:000001FB:134
+SY:C:F:drill:text:_step:000001FB:136
+SY:C:X:drill:136:1:text:1FB
+SY:C:S:F:drill:step:_step:(typ11)(typ0)
 SY:C:S:F:drill:__func__:___func__:(typ11)
 SY:C:S:L:drill:step:result:0:(typ11)
-SY:C:X:drill:103:13:text:16B
-SY:C:X:drill:104:33:text:170
-SY:C:X:drill:106:3:text:177
-SY:C:X:drill:107:3:text:180
-SY:C:X:drill:110:3:text:188
-SY:C:X:drill:111:3:text:190
-SY:C:X:drill:112:3:text:199
-SY:C:X:drill:113:3:text:1A6
-SY:C:X:drill:114:3:text:1AF
-SY:C:X:drill:116:4:text:1B7
-SY:C:X:drill:117:1:text:1B9
-SY:C:Z:drill:117:1:text:1B9
-SY:C:E:drill:text:_step:000001BC:117
+SY:C:X:drill:137:13:text:1FD
+SY:C:X:drill:138:4:text:202
+SY:C:X:drill:140:9:text:209
+SY:C:X:drill:141:12:text:212
+SY:C:X:drill:144:10:text:21A
+SY:C:X:drill:145:10:text:222
+SY:C:X:drill:146:21:text:22B
+SY:C:X:drill:147:11:text:238
+SY:C:X:drill:148:11:text:241
+SY:C:X:drill:151:1:text:24B
+SY:C:Z:drill:151:1:text:24B
+SY:C:E:drill:text:_step:0000024E:151
 SY:C:T:  typ0 V (-1)
 SY:C:T:  typ1 L (4)
 SY:C:T:  typ2 l (4)
@@ -259,6 +297,7 @@ SY:C:T:  typ13 E (2)
 SY:C:T:  typ14 F (2)
 SY:C:T:  typ15 P (2)
 SY:C:T:drill: typ16-drill A (16)(typ11)
+SY:C:T:drill: typ17-drill A (42)(typ11)
 SY:C:T: typ2 l (4)
 SY:C:T: typ4 c (1)
 SY:C:T: typ6 s (2)

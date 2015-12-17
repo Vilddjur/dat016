@@ -19,7 +19,7 @@ C:text	1B821BF0113D
 RG:text:displayML15:000000BC:O:W:_display_digits:216
 G:text:displayML15:00000000:_display_digits
 G:text:displayML15:0000003E:_display_dec
-SY:C:M:displayML15$C:/Users/oskarje/Documents/GitHub/dat016/uppgift3/displayML15.c
+SY:C:M:displayML15$C:/Users/oskarje/Documents/GitHub/dat016/displayML15.c
 SY:C:F:displayML15:text:_display_digits:00000000:3
 SY:C:X:displayML15:3:1:text:0
 SY:C:S:F:displayML15:display_digits:_display_digits:(typ0)(typ16-displayML15)

@@ -1,64 +1,127 @@
-QLD (Version 4.8.0)- Link/Load Summary: 'debug\uppgift4_Debug.s19'
+QLD (Version 4.8.1)- Link/Load Summary: 'debug\uppgift4_Debug.s19'
 SCRIPT FILES FROM THE FOLLOWING PATH(S):
-  'C:/Program Files/GMV/EducDist/config/xcc12'
+  'C:/Program Files (x86)/GMV/EducDist/config/xcc12'
 
 SCRIPT READ FROM THE FOLLOWING FILE(S):
   'default.lsc'
 
 ---------------------------
  SEARCHED LIBRARIES:
- 'C:/Program Files/GMV/EducDist/lib/xcc12/libccd.e12'
+ 'C:/Program Files (x86)/GMV/EducDist/lib/xcc12/libccd.e12'
 
 ---------------------------
  PROGRAM ENTRY:'__start'
 ---------------------------
  GROUPS AND SEGMENTS:
 
-  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 0000107D, (size: 126 Bytes)
-   00001000 0000106B 'text'
-   0000106C 0000107D 'data'
-
-  GROUP 'interrupt_vectors', READ/WRITE
+  GROUP 'const_group',
    NO SEGMENTS
 
-  GROUP 'const_group',
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 0000161D, (size: 1566 Bytes)
+   00001000 00001009 'init'
+   0000100A 000015DD 'text'
+   000015DE 00001619 'data'
+   0000161A 0000161D 'bss'
+
+  GROUP 'interrupt_vectors', READ/WRITE
    NO SEGMENTS
 ---------------------------
 LINKER DEFINED CONSTANTS:
    __rom_code_enabled = 0
-   __heap_start = 00000000
+   __heap_start = 0000161E
   from segment 'text'
-   00001000 '__text__start'
-   0000106C '__text__end'
-   0000006C '__text__size'
+   0000100A '__text__start'
+   000015DE '__text__end'
+   000005D4 '__text__size'
   from segment 'bss'
-   00000000 '__bss__start'
-   00000000 '__bss__end'
-   00000000 '__bss__size'
+   0000161A '__bss__start'
+   0000161E '__bss__end'
+   00000004 '__bss__size'
   from segment 'data'
-   0000106C '__data__start'
-   0000107E '__data__end'
-   00000012 '__data__size'
+   000015DE '__data__start'
+   0000161A '__data__end'
+   0000003C '__data__size'
   from segment 'rodata'
    00000000 '__rodata__start'
    00000000 '__rodata__end'
    00000000 '__rodata__size'
+  from segment 'init'
+   00001000 '__init__start'
+   0000100A '__init__end'
+   0000000A '__init__size'
 ---------------------------
 GLOBAL SYMBOL(S):
 
  in module: 'drill' of type 'O12' defined in file 'drill.o12'
   in segment: 'text'
-   00001004 '_MotorStop'
-   0000100A '_DrillUp'
-   00001016 '_Alarm'
-   00001023 '_Outzero'
-   0000100D '_Nstep'
-   00001001 '_MotorStart'
-   00001011 '_DrillDownTest'
-   00001020 '_DoAuto'
-   0000101B '_RefPos'
-   00001046 '_Outone'
-   00001018 '_DrillHole'
-   00001007 '_DrillDown'
+   00001091 '_MotorStop'
+   000010A7 '_DrillUp'
+   00001205 '_step'
+   0000100A '_Outzero'
+   000010B2 '_Nstep'
+   00001114 '_alarm'
+   00001064 '_delay'
+   0000107D '_MotorStart'
+   000010DC '_DrillDownTest'
+   00001196 '_DoAuto'
+   00001171 '_RefPos'
+   0000103A '_Outone'
+   00001152 '_DrillHole'
+   0000109C '_DrillDown'
+
+ in module: 'appstart' of type 'O12' defined in file 'appstart.o12'
+  in segment: 'init'
+   00001006 '_exit'
+   00001000 '__start'
+
+ in module: 'mainUppg54' of type 'O12' defined in file 'mainUppg54.o12'
+  in segment: 'text'
+   00001258 '_main'
+
+ in module: 'clockasm' of type 'O12' defined in file 'clockasm.o12'
+  in segment: 'text'
+   000012B0 '_reset_i'
+   000012B3 '_irq_rut'
+
+ in module: 'clock' of type 'O12' defined in file 'clock.o12'
+  in segment: 'text'
+   00001307 '_hold'
+   000012B7 '_init_clock'
+   000012F0 '_get_time'
+   000012D7 '_clock_inter'
+
+ in module: 'displayML15' of type 'O12' defined in file 'displayML15.o12'
+  in segment: 'text'
+   00001332 '_display_digits'
+   00001370 '_display_dec'
+
+ in module: 'keyboardML15' of type 'O12' defined in file 'keyboardML15.o12'
+  in segment: 'text'
+   000013F6 '_get_key'
+
+ in module: '_cmp32' of type 'O12' defined in file '_cmp32.o12'
+  in segment: 'text'
+   00001422 'cmp32'
+
+ in module: '_mul32' of type 'O12' defined in file '_mul32.o12'
+  in segment: 'text'
+   000014CE 'muls32'
+   0000143B 'mulu32'
+
+ in module: '_add32' of type 'O12' defined in file '_add32.o12'
+  in segment: 'text'
+   00001597 'add32'
+
+ in module: '_and32' of type 'O12' defined in file '_and32.o12'
+  in segment: 'text'
+   000015A6 'and32'
+
+ in module: '_shl32' of type 'O12' defined in file '_shl32.o12'
+  in segment: 'text'
+   000015B5 'shl32'
+
+ in module: '_sub32' of type 'O12' defined in file '_sub32.o12'
+  in segment: 'text'
+   000015CE 'sub32'
 ---
  End of listfile

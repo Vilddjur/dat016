@@ -1,40 +1,40 @@
-QLD (Version 4.8.0)- Link/Load Summary: 'debug\uppgift3_Debug.s19'
+QLD (Version 4.8.1)- Link/Load Summary: 'debug\uppgift3_Debug.s19'
 SCRIPT FILES FROM THE FOLLOWING PATH(S):
-  'C:/Program Files/GMV/EducDist/config/xcc12'
+  'C:/Program Files (x86)/GMV/EducDist/config/xcc12'
 
 SCRIPT READ FROM THE FOLLOWING FILE(S):
   'default.lsc'
 
 ---------------------------
  SEARCHED LIBRARIES:
- 'C:/Program Files/GMV/EducDist/lib/xcc12/libccd.e12'
+ 'C:/Program Files (x86)/GMV/EducDist/lib/xcc12/libccd.e12'
 
 ---------------------------
  PROGRAM ENTRY:'__start'
 ---------------------------
  GROUPS AND SEGMENTS:
 
-  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 00001303, (size: 772 Bytes)
-   00001000 00001009 'init'
-   0000100A 000012FF 'text'
-   00001300 00001303 'bss'
-
-  GROUP 'interrupt_vectors', READ/WRITE
+  GROUP 'const_group',
    NO SEGMENTS
 
-  GROUP 'const_group',
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 00001305, (size: 774 Bytes)
+   00001000 00001009 'init'
+   0000100A 00001301 'text'
+   00001302 00001305 'bss'
+
+  GROUP 'interrupt_vectors', READ/WRITE
    NO SEGMENTS
 ---------------------------
 LINKER DEFINED CONSTANTS:
    __rom_code_enabled = 0
-   __heap_start = 00001304
+   __heap_start = 00001306
   from segment 'text'
    0000100A '__text__start'
-   00001300 '__text__end'
-   000002F6 '__text__size'
+   00001302 '__text__end'
+   000002F8 '__text__size'
   from segment 'bss'
-   00001300 '__bss__start'
-   00001304 '__bss__end'
+   00001302 '__bss__start'
+   00001306 '__bss__end'
    00000004 '__bss__size'
   from segment 'data'
    00000000 '__data__start'
@@ -58,10 +58,10 @@ GLOBAL SYMBOL(S):
 
  in module: 'clock' of type 'O12' defined in file 'clock.o12'
   in segment: 'text'
-   00001071 '_hold'
-   00001012 '_init_clock'
-   00001059 '_get_time'
-   00001033 '_clock_inter'
+   0000106D '_hold'
+   00001011 '_init_clock'
+   00001056 '_get_time'
+   00001031 '_clock_inter'
 
  in module: 'appstart' of type 'O12' defined in file 'appstart.o12'
   in segment: 'init'
@@ -70,32 +70,32 @@ GLOBAL SYMBOL(S):
 
  in module: 'main' of type 'O12' defined in file 'main.o12'
   in segment: 'text'
-   00001090 '_main'
+   0000108B '_main'
 
  in module: 'displayML15' of type 'O12' defined in file 'displayML15.o12'
   in segment: 'text'
-   00001098 '_display_digits'
-   000010D3 '_display_dec'
+   00001092 '_display_digits'
+   000010D0 '_display_dec'
 
  in module: '_cmp32' of type 'O12' defined in file '_cmp32.o12'
   in segment: 'text'
-   00001154 'cmp32'
+   00001156 'cmp32'
 
  in module: '_mul32' of type 'O12' defined in file '_mul32.o12'
   in segment: 'text'
-   00001200 'muls32'
-   0000116D 'mulu32'
+   00001202 'muls32'
+   0000116F 'mulu32'
 
  in module: '_add32' of type 'O12' defined in file '_add32.o12'
   in segment: 'text'
-   000012C9 'add32'
+   000012CB 'add32'
 
  in module: '_and32' of type 'O12' defined in file '_and32.o12'
   in segment: 'text'
-   000012D8 'and32'
+   000012DA 'and32'
 
  in module: '_shl32' of type 'O12' defined in file '_shl32.o12'
   in segment: 'text'
-   000012E7 'shl32'
+   000012E9 'shl32'
 ---
  End of listfile

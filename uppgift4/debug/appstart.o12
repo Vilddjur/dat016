@@ -5,7 +5,7 @@ C:init	CF2FFF160000A720FD
 RG:init:appstart:00000004:O:W:_main:8
 G:init:appstart:00000006:_exit
 G:init:appstart:00000000:__start
-SY:A:M:appstart$C:/Users/Maxim/Desktop/PIS/dat016/appstart.s12
+SY:A:M:appstart$C:/Users/oskarje/Documents/GitHub/dat016/appstart.s12
 SY:A:X:appstart:7:init:0
 SY:A:X:appstart:8:init:3
 SY:A:X:appstart:9:init:6

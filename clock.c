@@ -5,16 +5,15 @@ extern void reset_i(void);
 extern void irq_rut(void);
 
 static time_type clock;
-
 void init_clock()
 {
 	clock = 0;
 	irqVector = irq_rut;
-	#ifdef SIMULATOR
-	RTICTL = 0x10;
-	#else
-	RTICTL = 0x49
-	#endif
+	//#ifdef SIMULATOR
+	//RTICTL = 0x10;
+	//#else
+	RTICTL = 0x49;
+	//#endif
 	CRGINT |= 0x80;
 	reset_i();
 	//CRGFLG |= 0x80;
@@ -22,9 +21,9 @@ void init_clock()
 }
 
 void clock_inter()
-{	display_dec((int)clock);
+{	//display_dec((int)clock);
 	clock++;
-	CRGFLG |= 0x80;
+	CRGFLG = 0x80;
 //kvittera rtif
 }
 time_type get_time()
@@ -34,6 +33,6 @@ time_type get_time()
 void hold(time_type input){
 
 	time_type start_time = get_time();
-	//while(get_time() - start_time < input);
-	while(get_time() != start_time);
+	while((get_time() - start_time) < input);
+	//while(get_time() != start_time);
 }

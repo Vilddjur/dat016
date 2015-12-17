@@ -1,16 +1,72 @@
 mod:mainUppg54:O12:mainUppg54.o12
-seg:text:3
+seg:text:88
 seg:bss:0
 seg:data:0
 seg:rodata:0
-C:text	A7A73D
-G:text:mainUppg54:00000001:_main
-SY:C:M:mainUppg54$C:/Users/Maxim/Desktop/PIS/dat016/mainUppg54.c
-SY:C:F:mainUppg54:text:_main:00000001:3
-SY:C:X:mainUppg54:3:1:text:1
-SY:C:X:mainUppg54:5:1:text:2
-SY:C:Z:mainUppg54:5:1:text:2
-SY:C:E:mainUppg54:text:_main:00000003:5
+C:text	1B9E87C76C801600001600006C80EC80
+C:text	8C0007222C59CE000005E71600002021
+C:text	160000201C1600002017160000201216
+C:text	0000200D160000200816000020031600
+C:text	001820FFC41B823D
+C:text	00000000000000000000000000000000
+RG:text:mainUppg54:00000007:O:W:_init_clock:39
+RG:text:mainUppg54:0000000A:O:W:_get_key:45
+RG:text:mainUppg54:0000001C:O:W:_MotorStart:60
+RG:text:mainUppg54:00000021:O:W:_MotorStop:69
+RG:text:mainUppg54:00000026:O:W:_DrillDown:78
+RG:text:mainUppg54:0000002B:O:W:_DrillUp:87
+RG:text:mainUppg54:00000030:O:W:_step:96
+RG:text:mainUppg54:00000035:O:W:_DrillHole:105
+RG:text:mainUppg54:0000003A:O:W:_RefPos:114
+RG:text:mainUppg54:0000003F:O:W:_DoAuto:123
+RL:text:mainUppg54:00000017:O:W:00000048:text:53
+RL:text:mainUppg54:00000048:O:W:0000001B:text:138
+RL:text:mainUppg54:0000004A:O:W:00000020:text:138
+RL:text:mainUppg54:0000004C:O:W:00000025:text:138
+RL:text:mainUppg54:0000004E:O:W:0000002A:text:138
+RL:text:mainUppg54:00000050:O:W:0000002F:text:138
+RL:text:mainUppg54:00000052:O:W:00000034:text:138
+RL:text:mainUppg54:00000054:O:W:00000039:text:138
+RL:text:mainUppg54:00000056:O:W:0000003E:text:138
+G:text:mainUppg54:00000000:_main
+SY:C:M:mainUppg54$C:/Users/oskarje/Documents/GitHub/dat016/mainUppg54.c
+SY:C:F:mainUppg54:text:_main:00000000:4
+SY:C:X:mainUppg54:4:1:text:0
+SY:C:S:F:mainUppg54:main:_main:(typ11)(typ0)
+SY:C:S:F:mainUppg54:__func__:___func__:(typ11)
+SY:C:S:L:mainUppg54:main:key:0:(typ11)
+SY:C:X:mainUppg54:5:9:text:2
+SY:C:X:mainUppg54:6:12:text:6
+SY:C:X:mainUppg54:7:7:text:9
+SY:C:X:mainUppg54:8:17:text:9
+SY:C:X:mainUppg54:9:9:text:E
+SY:C:X:mainUppg54:10:3:text:1B
+SY:C:X:mainUppg54:11:15:text:1B
+SY:C:X:mainUppg54:12:4:text:1E
+SY:C:X:mainUppg54:13:3:text:20
+SY:C:X:mainUppg54:14:14:text:20
+SY:C:X:mainUppg54:15:4:text:23
+SY:C:X:mainUppg54:16:3:text:25
+SY:C:X:mainUppg54:17:14:text:25
+SY:C:X:mainUppg54:18:4:text:28
+SY:C:X:mainUppg54:19:3:text:2A
+SY:C:X:mainUppg54:20:12:text:2A
+SY:C:X:mainUppg54:21:4:text:2D
+SY:C:X:mainUppg54:22:3:text:2F
+SY:C:X:mainUppg54:23:9:text:2F
+SY:C:X:mainUppg54:24:4:text:32
+SY:C:X:mainUppg54:25:3:text:34
+SY:C:X:mainUppg54:26:14:text:34
+SY:C:X:mainUppg54:27:4:text:37
+SY:C:X:mainUppg54:28:3:text:39
+SY:C:X:mainUppg54:29:11:text:39
+SY:C:X:mainUppg54:30:4:text:3C
+SY:C:X:mainUppg54:31:3:text:3E
+SY:C:X:mainUppg54:32:11:text:3E
+SY:C:X:mainUppg54:33:4:text:41
+SY:C:X:mainUppg54:37:1:text:45
+SY:C:Z:mainUppg54:37:1:text:45
+SY:C:E:mainUppg54:text:_main:00000058:37
 SY:C:T:  typ0 V (-1)
 SY:C:T:  typ1 L (4)
 SY:C:T:  typ2 l (4)

@@ -13,7 +13,7 @@ void init_clock()
 	#ifdef SIMULATOR
 	RTICTL = 0x10;
 	#else
-	RTICTL = 0x49
+	RTICTL = 0x49;
 	#endif
 	CRGINT |= 0x80;
 	reset_i();

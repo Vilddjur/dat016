@@ -102,7 +102,7 @@ LIBPATH=
 
 # Application
 "debug\uppgift2_Debug.s19": $(OBJ)
-	LINK -o"debug\uppgift2_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
+	LINK -o"debug\uppgift2_Debug.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libccd.e12"  $(OBJ)
 #-----------------------------------------------
 
 
@@ -171,7 +171,7 @@ LIBPATH=
 
 # Application
 "final\uppgift2_Final.s19": $(OBJ)
-	LINK -o"final\uppgift2_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
+	LINK -o"final\uppgift2_Final.s19" $(LNFLAGS)  $(LIBPATH) $(LIB) -L"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12" -l"C:\Program Files (x86)\GMV\EducDist\bin\..\lib\xcc12\libcc.e12"  $(OBJ)
 #-----------------------------------------------
 
 
