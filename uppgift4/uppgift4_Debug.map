@@ -1,0 +1,64 @@
+QLD (Version 4.8.0)- Link/Load Summary: 'debug\uppgift4_Debug.s19'
+SCRIPT FILES FROM THE FOLLOWING PATH(S):
+  'C:/Program Files/GMV/EducDist/config/xcc12'
+
+SCRIPT READ FROM THE FOLLOWING FILE(S):
+  'default.lsc'
+
+---------------------------
+ SEARCHED LIBRARIES:
+ 'C:/Program Files/GMV/EducDist/lib/xcc12/libccd.e12'
+
+---------------------------
+ PROGRAM ENTRY:'__start'
+---------------------------
+ GROUPS AND SEGMENTS:
+
+  GROUP 'test_group', READ/WRITE ,allocation to: 00001000 - 0000107D, (size: 126 Bytes)
+   00001000 0000106B 'text'
+   0000106C 0000107D 'data'
+
+  GROUP 'interrupt_vectors', READ/WRITE
+   NO SEGMENTS
+
+  GROUP 'const_group',
+   NO SEGMENTS
+---------------------------
+LINKER DEFINED CONSTANTS:
+   __rom_code_enabled = 0
+   __heap_start = 00000000
+  from segment 'text'
+   00001000 '__text__start'
+   0000106C '__text__end'
+   0000006C '__text__size'
+  from segment 'bss'
+   00000000 '__bss__start'
+   00000000 '__bss__end'
+   00000000 '__bss__size'
+  from segment 'data'
+   0000106C '__data__start'
+   0000107E '__data__end'
+   00000012 '__data__size'
+  from segment 'rodata'
+   00000000 '__rodata__start'
+   00000000 '__rodata__end'
+   00000000 '__rodata__size'
+---------------------------
+GLOBAL SYMBOL(S):
+
+ in module: 'drill' of type 'O12' defined in file 'drill.o12'
+  in segment: 'text'
+   00001004 '_MotorStop'
+   0000100A '_DrillUp'
+   00001016 '_Alarm'
+   00001023 '_Outzero'
+   0000100D '_Nstep'
+   00001001 '_MotorStart'
+   00001011 '_DrillDownTest'
+   00001020 '_DoAuto'
+   0000101B '_RefPos'
+   00001046 '_Outone'
+   00001018 '_DrillHole'
+   00001007 '_DrillDown'
+---
+ End of listfile

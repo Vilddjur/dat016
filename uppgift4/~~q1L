@@ -1,0 +1,105 @@
+mod:_mul32:O12:_mul32.o12
+seg:text:348
+seg:bss:0
+seg:data:0
+seg:rodata:0
+C:text	1B92CD0000CC00016D826C8487C76C8C
+C:text	6C8A87C76C80EC808C00202D0B182000
+C:text	6BEE80086E8020EEEDF010ECF0123B35
+C:text	ED86EC883B351600001B888D00002605
+C:text	8C0000270210F718270026EC80CD0000
+C:text	3B35EDF018ECF01A3B351600001B883B
+C:text	35ED8EECF0103B351600001B886D8A6C
+C:text	8CCD0000CC00013B35ED86EC883B3516
+C:text	00001B886D826C841820FF95ED8AEC8C
+C:text	1B8E3D
+C:text	1B9ACD000087C73B35EDF010ECF0123B
+C:text	351600001B882C14ED8CEC8EB7C64151
+C:text	B7C64151C300012401022004ED8CEC8E
+C:text	3B35CD000087C73B35EDF010ECF0123B
+C:text	351600001B882C14ED8CEC8EB7C64151
+C:text	B7C64151C300012401022004ED8CEC8E
+C:text	3B351600001B886D826C84CD000087C7
+C:text	3B35EDF010ECF0123B351600001B882C
+C:text	05CC0001200287C76C80CD000087C73B
+C:text	35ED8CEC8E3B351600001B882C05CC00
+C:text	01200287C7E881A8808C00002714ED82
+C:text	EC84B7C64151B7C64151C30001240102
+C:text	2004ED82EC841B863D
+RG:text:_mul32:00000037:O:W:and32:95
+RG:text:_mul32:0000005B:O:W:shl32:113
+RG:text:_mul32:00000069:O:W:add32:121
+RG:text:_mul32:00000080:O:W:shl32:136
+RG:text:_mul32:000000A5:O:W:cmp32:193
+RG:text:_mul32:000000D5:O:W:cmp32:223
+RG:text:_mul32:000000F6:O:W:mulu32:244
+RG:text:_mul32:0000010E:O:W:cmp32:260
+RG:text:_mul32:0000012B:O:W:cmp32:279
+G:text:_mul32:00000093:muls32
+G:text:_mul32:00000000:mulu32
+SY:C:M:_mul32$../src/libcc/common/_mul32.c
+SY:C:F:_mul32:text:mulu32:00000000:9
+SY:C:X:_mul32:9:13:text:0
+SY:C:S:F:_mul32:mulu32:mulu32:(typ2)(typ2)(typ2)
+SY:C:S:L:_mul32:mulu32:a:16:(typ2)
+SY:C:S:L:_mul32:mulu32:b:20:(typ2)
+SY:C:S:F:_mul32:__func__:___func__:(typ11)
+SY:C:S:L:_mul32:mulu32:result:10:(typ2)
+SY:C:S:L:_mul32:mulu32:pp:6:(typ2)
+SY:C:S:L:_mul32:mulu32:mask:2:(typ2)
+SY:C:S:L:_mul32:mulu32:i:0:(typ11)
+SY:C:X:_mul32:16:9:text:2
+SY:C:X:_mul32:17:11:text:C
+SY:C:X:_mul32:18:7:text:12
+SY:C:X:_mul32:18:14:text:16
+SY:C:X:_mul32:18:20:text:21
+SY:C:X:_mul32:20:4:text:28
+SY:C:X:_mul32:21:31:text:4B
+SY:C:X:_mul32:22:11:text:71
+SY:C:X:_mul32:25:1:text:90
+SY:C:Z:_mul32:25:1:text:90
+SY:C:E:_mul32:text:mulu32:00000093:25
+SY:C:F:_mul32:text:muls32:00000093:28
+SY:C:X:_mul32:28:13:text:93
+SY:C:S:F:_mul32:muls32:muls32:(typ1)(typ1)(typ1)
+SY:C:S:L:_mul32:muls32:a:8:(typ1)
+SY:C:S:L:_mul32:muls32:b:12:(typ1)
+SY:C:S:F:_mul32:__func__:___func__:(typ11)
+SY:C:S:L:_mul32:muls32:r:2:(typ1)
+SY:C:X:_mul32:33:53:text:95
+SY:C:X:_mul32:35:4:text:FE
+SY:C:X:_mul32:39:1:text:159
+SY:C:Z:_mul32:39:1:text:159
+SY:C:E:_mul32:text:muls32:0000015C:39
+SY:C:T:  typ0 V (-1)
+SY:C:T:  typ1 L (4)
+SY:C:T:  typ2 l (4)
+SY:C:T:  typ3 C (1)
+SY:C:T:  typ4 c (1)
+SY:C:T:  typ5 S (2)
+SY:C:T:  typ6 s (2)
+SY:C:T:  typ7 g (4)
+SY:C:T:  typ8 G (4)
+SY:C:T:  typ9 h (4)
+SY:C:T:  typ10 R (2)
+SY:C:T:  typ11 I (2)
+SY:C:T:  typ12 i (2)
+SY:C:T:  typ13 E (2)
+SY:C:T:  typ14 F (2)
+SY:C:T:  typ15 P (2)
+SY:C:T:_mul32: typ16-_mul32 Z (4)U float_long {\
+f:(0):(typ7);\
+l:(0):(typ1);\
+}
+SY:C:T:_mul32: typ17-_mul32 Z (4)U long_int {\
+l:(0):(typ1);\
+s:(0):(typ18-_mul32);\
+}
+SY:C:T:_mul32: typ18-_mul32 Z (4)S {\
+msw:(0):(typ12);\
+lsw:(2):(typ12);\
+}
+SY:C:T: typ2 l (4)
+SY:C:T: typ4 c (1)
+SY:C:T: typ6 s (2)
+e

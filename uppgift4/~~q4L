@@ -1,0 +1,67 @@
+mod:_shl32:O12:_shl32.o12
+seg:text:25
+seg:bss:0
+seg:data:0
+seg:rodata:0
+C:text	EC84ED823635A68C841F270A58658265
+C:text	8165804326F631323D
+G:text:_shl32:00000000:shl32
+SY:C:M:_shl32$../src/libcc/common/_shl32.c
+SY:C:F:_shl32:text:shl32:00000000:9
+SY:C:X:_shl32:9:13:text:0
+SY:C:S:F:_shl32:shl32:shl32:(typ2)(typ2)(typ1)
+SY:C:S:L:_shl32:shl32:a:2:(typ2)
+SY:C:S:L:_shl32:shl32:amount:6:(typ1)
+SY:C:S:F:_shl32:__func__:___func__:(typ11)
+SY:C:X:_shl32:184:2:text:0
+SY:C:X:_shl32:185:2:text:2
+SY:C:X:_shl32:186:2:text:4
+SY:C:X:_shl32:187:2:text:5
+SY:C:X:_shl32:188:2:text:6
+SY:C:X:_shl32:189:2:text:8
+SY:C:X:_shl32:190:2:text:A
+SY:C:X:_shl32:191:2:text:C
+SY:C:X:_shl32:192:2:text:C
+SY:C:X:_shl32:193:2:text:D
+SY:C:X:_shl32:194:2:text:F
+SY:C:X:_shl32:195:2:text:11
+SY:C:X:_shl32:196:2:text:13
+SY:C:X:_shl32:197:2:text:14
+SY:C:X:_shl32:198:2:text:16
+SY:C:X:_shl32:199:2:text:16
+SY:C:X:_shl32:200:2:text:17
+SY:C:X:_shl32:205:1:text:18
+SY:C:Z:_shl32:205:1:text:18
+SY:C:E:_shl32:text:shl32:00000019:205
+SY:C:T:  typ0 V (-1)
+SY:C:T:  typ1 L (4)
+SY:C:T:  typ2 l (4)
+SY:C:T:  typ3 C (1)
+SY:C:T:  typ4 c (1)
+SY:C:T:  typ5 S (2)
+SY:C:T:  typ6 s (2)
+SY:C:T:  typ7 g (4)
+SY:C:T:  typ8 G (4)
+SY:C:T:  typ9 h (4)
+SY:C:T:  typ10 R (2)
+SY:C:T:  typ11 I (2)
+SY:C:T:  typ12 i (2)
+SY:C:T:  typ13 E (2)
+SY:C:T:  typ14 F (2)
+SY:C:T:  typ15 P (2)
+SY:C:T:_shl32: typ16-_shl32 Z (4)U float_long {\
+f:(0):(typ7);\
+l:(0):(typ1);\
+}
+SY:C:T:_shl32: typ17-_shl32 Z (4)U long_int {\
+l:(0):(typ1);\
+s:(0):(typ18-_shl32);\
+}
+SY:C:T:_shl32: typ18-_shl32 Z (4)S {\
+msw:(0):(typ12);\
+lsw:(2):(typ12);\
+}
+SY:C:T: typ2 l (4)
+SY:C:T: typ4 c (1)
+SY:C:T: typ6 s (2)
+e

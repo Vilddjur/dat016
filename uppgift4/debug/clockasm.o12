@@ -1,0 +1,15 @@
+mod:clockasm:O12:clockasm.o12
+seg:text:7
+C:text	10EF3D1600000B
+RG:text:clockasm:00000004:O:W:_clock_inter:9
+G:text:clockasm:00000000:_reset_i
+G:text:clockasm:00000003:_irq_rut
+SY:A:M:clockasm$C:/Users/Maxim/Desktop/PIS/dat016/uppgift4/clockasm.s12
+SY:A:X:clockasm:6:text:0
+SY:A:X:clockasm:7:text:2
+SY:A:X:clockasm:9:text:3
+SY:A:X:clockasm:10:text:6
+SY:C:T: typ2 l (4)
+SY:C:T: typ4 c (1)
+SY:C:T: typ6 s (2)
+e
